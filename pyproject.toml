@@ -52,7 +52,7 @@ repository = "https://github.com/comfygit-ai/comfygit-manager"
 version = "0.0.24"
 download_url = "https://cdn.comfy.org/akatz/comfygit-manager/0.0.24/node.zip"
 source = "development"
-criticality = "required"
+criticality = "optional"
 
 [tool.comfygit.nodes.comfyui-kjnodes]
 name = "ComfyUI-KJNodes"
