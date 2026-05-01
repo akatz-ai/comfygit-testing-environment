@@ -93,6 +93,81 @@ status = "resolved"
 nodes = [{node_id = "4", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "v1-5-pruned-emaonly-fp16.safetensors"}]
 hash = "1fd237d4d78fa19f"
 
+[tool.comfygit.workflows."txt2img basic".execution_contract]
+version = 1
+default_contract = "default"
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "6"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+default = "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "width"
+type = "number"
+node_id = "5"
+required = true
+display_name = "width"
+widget_idx = 0
+default = 512
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "height"
+type = "number"
+node_id = "5"
+required = true
+display_name = "height"
+widget_idx = 1
+default = 512
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "number"
+node_id = "3"
+required = false
+display_name = "seed"
+widget_idx = 0
+default = 156680208700286
+min = 0
+max = "18446744073709552000"
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "steps"
+type = "number"
+node_id = "3"
+required = true
+display_name = "steps"
+widget_idx = 2
+default = 20
+min = 1
+max = 50
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
+name = "cfg"
+type = "number"
+node_id = "3"
+required = true
+display_name = "cfg"
+widget_idx = 3
+default = 8
+min = 0
+max = 100
+
+[[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.outputs]]
+name = "save_image"
+type = "image"
+node_id = "9"
+display_name = "Save Image"
+selector = "primary"
+
 [tool.comfygit.workflows.LLM_Utils_v1]
 path = "workflows/LLM_Utils_v1.json"
 nodes = ["comfyui-akatz-nodes", "rgthree-comfy"]
