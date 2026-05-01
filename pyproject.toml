@@ -81,15 +81,6 @@ download_url = "https://cdn.comfy.org/akatz/comfyui-akatz-nodes/1.11.1/node.zip"
 source = "registry"
 criticality = "required"
 
-[tool.comfygit.nodes.qweneditutils]
-name = "Comfyui-QwenEditUtils"
-registry_id = "qweneditutils"
-repository = "https://github.com/lrzjason/Comfyui-QwenEditUtils"
-version = "2.0.7"
-download_url = "https://cdn.comfy.org/lrzjason/qweneditutils/2.0.7/node.zip"
-source = "registry"
-criticality = "required"
-
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -110,7 +101,7 @@ models = []
 [tool.comfygit.workflows.LLM_Utils_v1.custom_node_map]
 "Note Plus (mtb)" = false
 Searge_LLM_Node = false
-JWStringMultiline = "qweneditutils"
+JWStringMultiline = false
 
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
@@ -139,4 +130,3 @@ comfyui-kjnodes-f4971021 = [
     "pillow>=10.3.0",
 ]
 rgthree-comfy-c0668886 = []
-comfyui-qweneditutils-d34f7fba = []
