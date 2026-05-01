@@ -213,12 +213,71 @@ status = "resolved"
 nodes = [{node_id = "03921aea-a70e-44b4-bc77-f6bda10f2120:91", node_type = "CLIPLoader", widget_idx = 0, widget_value = "ernie-image-prompt-enhancer.safetensors"}]
 hash = "343e4ddfba72e5bf"
 
+[tool.comfygit.workflows.klein-i2i-1-image]
+path = "workflows/klein-i2i-1-image.json"
+
+[tool.comfygit.workflows.klein-i2i-1-image.execution_contract]
+version = 1
+default_contract = "default"
+
+[[tool.comfygit.workflows.klein-i2i-1-image.execution_contract.contracts.default.inputs]]
+name = "image"
+type = "image"
+node_id = "714"
+required = true
+display_name = "image"
+widget_idx = 0
+default = "image (1).png"
+enum_values = ["image (1).png"]
+
+[[tool.comfygit.workflows.klein-i2i-1-image.execution_contract.contracts.default.inputs]]
+name = "text"
+type = "string"
+node_id = "135"
+required = true
+display_name = "text"
+widget_idx = 0
+default = "Create a young female character, make her sitting in front of a computer in a cozy lofi setting with a coffee steaming off to the side, and a cat in the windowsill sleeping while a cyberpunk city glows outside. BW image"
+
+[[tool.comfygit.workflows.klein-i2i-1-image.execution_contract.contracts.default.outputs]]
+name = "save_image"
+type = "image"
+node_id = "94"
+display_name = "Save Image"
+selector = "primary"
+
+[[tool.comfygit.workflows.klein-i2i-1-image.models]]
+filename = "qwen_3_8b_fp8mixed.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "133", node_type = "CLIPLoader", widget_idx = 0, widget_value = "qwen_3_8b_fp8mixed.safetensors"}]
+hash = "5b9574ecd29d05d0"
+
+[[tool.comfygit.workflows.klein-i2i-1-image.models]]
+filename = "flux-2-klein-9b-kv-fp8.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "126", node_type = "UNETLoader", widget_idx = 0, widget_value = "flux-2-klein-9b-kv-fp8.safetensors"}]
+hash = "0ad08392547a537a"
+
+[[tool.comfygit.workflows.klein-i2i-1-image.models]]
+filename = "flux2-vae.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "127", node_type = "VAELoader", widget_idx = 0, widget_value = "flux2-vae.safetensors"}]
+hash = "eb18063e6259e230"
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
 e32136aa1ef16323 = {filename = "ministral-3-3b.safetensors", size = 7717637511, relative_path = "text_encoders/ministral-3-3b.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/text_encoders/ministral-3-3b.safetensors"]}
 eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relative_path = "vae/flux2-vae.safetensors", category = "vae", sources = ["https://huggingface.co/Comfy-Org/flux2-dev/resolve/main/split_files/vae/flux2-vae.safetensors"]}
 343e4ddfba72e5bf = {filename = "ernie-image-prompt-enhancer.safetensors", size = 6877439999, relative_path = "text_encoders/ernie-image-prompt-enhancer.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/text_encoders/ernie-image-prompt-enhancer.safetensors"]}
+5b9574ecd29d05d0 = {filename = "qwen_3_8b_fp8mixed.safetensors", size = 8664848742, relative_path = "text_encoders/qwen_3_8b_fp8mixed.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"]}
+0ad08392547a537a = {filename = "flux-2-klein-9b-kv-fp8.safetensors", size = 9818935984, relative_path = "diffusion_models/flux-2-klein-9b-kv-fp8.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv-fp8/resolve/main/flux-2-klein-9b-kv-fp8.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
