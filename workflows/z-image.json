@@ -88,63 +88,6 @@
   "version": 0.4,
   "nodes": [
     {
-      "id": 4,
-      "type": "VAEDecode",
-      "widgets_values": [],
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 2,
-          "localized_name": "samples",
-          "slot_index": 0
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 3,
-          "localized_name": "vae",
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            6
-          ],
-          "localized_name": "IMAGE",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode",
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.2.2",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "pos": [
-        1144.154052734375,
-        1508.0531005859375
-      ],
-      "size": [
-        210.0,
-        46.0
-      ],
-      "order": 6,
-      "mode": 0,
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 6,
       "type": "CLIPTextEncode",
       "widgets_values": [
@@ -642,15 +585,72 @@
       "mode": 0,
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "VAEDecode",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 2,
+          "localized_name": "samples",
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 3,
+          "localized_name": "vae",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ],
+          "localized_name": "IMAGE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.2.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "pos": [
+        1146.0389310382525,
+        1479.7799260277725
+      ],
+      "size": [
+        210.0,
+        46.0
+      ],
+      "order": 6,
+      "mode": 0,
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "extra": {
     "ue_links": [],
     "ds": {
-      "scale": 1.4122927695244532,
+      "scale": 1.0610764609500023,
       "offset": [
-        303.7034265845859,
-        -1136.2433578743628
+        592.2061427297643,
+        -992.0093120762032
       ]
     },
     "frontendVersion": "1.27.10",
