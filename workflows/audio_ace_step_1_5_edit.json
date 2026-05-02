@@ -820,59 +820,6 @@
       "mode": 0
     },
     {
-      "id": 13,
-      "type": "ModelSamplingAuraFlow",
-      "widgets_values": [
-        3
-      ],
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 19,
-          "localized_name": "model",
-          "slot_index": 0
-        },
-        {
-          "name": "shift",
-          "type": "FLOAT",
-          "localized_name": "shift",
-          "widget": {
-            "name": "shift"
-          },
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            9,
-            10
-          ],
-          "localized_name": "MODEL",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ModelSamplingAuraFlow",
-        "cnr_id": "comfy-core",
-        "ver": "0.12.2"
-      },
-      "flags": {},
-      "pos": [
-        1483.3770112170293,
-        213.99568542833242
-      ],
-      "size": [
-        330.0,
-        60.0
-      ],
-      "order": 6,
-      "mode": 0
-    },
-    {
       "id": 5,
       "type": "ConditioningZeroOut",
       "widgets_values": [],
@@ -1606,14 +1553,67 @@
       ],
       "order": 5,
       "mode": 0
+    },
+    {
+      "id": 13,
+      "type": "ModelSamplingAuraFlow",
+      "widgets_values": [
+        3
+      ],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19,
+          "localized_name": "model",
+          "slot_index": 0
+        },
+        {
+          "name": "shift",
+          "type": "FLOAT",
+          "localized_name": "shift",
+          "widget": {
+            "name": "shift"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9,
+            10
+          ],
+          "localized_name": "MODEL",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1466.5558629108864,
+        160.16801084867333
+      ],
+      "size": [
+        330.0,
+        60.0
+      ],
+      "order": 6,
+      "mode": 0
     }
   ],
   "extra": {
     "ds": {
-      "scale": 1.0789988691420798,
+      "scale": 0.8917346025967601,
       "offset": [
-        464.2529980509853,
-        103.51253220863583
+        396.0545947862,
+        357.97813718031784
       ]
     },
     "workflowRendererVersion": "LG",
