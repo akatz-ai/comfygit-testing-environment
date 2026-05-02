@@ -341,6 +341,33 @@ status = "resolved"
 nodes = [{node_id = "1", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "ace_step_1.5_turbo_aio.safetensors"}]
 hash = "6350a8e16134698f"
 
+[tool.comfygit.workflows.z-image]
+path = "workflows/z-image.json"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "ae.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "2", node_type = "VAELoader", widget_idx = 0, widget_value = "Z-Image\\ae.safetensors"}]
+hash = "38f082e7b86d146b"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "z_image_turbo_bf16.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "1", node_type = "UNETLoader", widget_idx = 0, widget_value = "Z-Image\\z_image_turbo_bf16.safetensors"}]
+hash = "86628cf98ae14c4b"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "qwen_3_4b.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "14", node_type = "CLIPLoader", widget_idx = 0, widget_value = "Z-Image\\qwen_3_4b.safetensors"}]
+hash = "fe0e63500dafbced"
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -350,6 +377,9 @@ eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relati
 5b9574ecd29d05d0 = {filename = "qwen_3_8b_fp8mixed.safetensors", size = 8664848742, relative_path = "text_encoders/qwen_3_8b_fp8mixed.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"]}
 0ad08392547a537a = {filename = "flux-2-klein-9b-kv-fp8.safetensors", size = 9818935984, relative_path = "diffusion_models/flux-2-klein-9b-kv-fp8.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv-fp8/resolve/main/flux-2-klein-9b-kv-fp8.safetensors"]}
 6350a8e16134698f = {filename = "ace_step_1.5_turbo_aio.safetensors", size = 10025478736, relative_path = "checkpoints/ace_step_1.5_turbo_aio.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/checkpoints/ace_step_1.5_turbo_aio.safetensors"]}
+38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae"}
+86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models"}
+fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders"}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
