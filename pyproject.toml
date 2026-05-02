@@ -117,6 +117,24 @@ download_url = "https://cdn.comfy.org/akatz/comfyui-depthflow-nodes/1.2.3/node.z
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.audio-general-ComfyUI]
+name = "Audio General"
+registry_id = "audio-general-ComfyUI"
+repository = "https://github.com/niknah/audio-general-ComfyUI"
+version = "1.0.0"
+download_url = "https://cdn.comfy.org/niknah/audio-general-ComfyUI/1.0.0/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui_ryanonyheinside]
+name = "RyanOnTheInside"
+registry_id = "comfyui_ryanonyheinside"
+repository = "https://github.com/ryanontheinside/ComfyUI_RyanOnTheInside"
+version = "2.2.4"
+download_url = "https://cdn.comfy.org/ryanontheinside/comfyui_ryanonyheinside/2.2.4/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -311,6 +329,18 @@ path = "workflows/depthflow_showcase_v2_1.json"
 nodes = ["comfyui-basic-math", "comfyui-depthanythingv2", "comfyui-depthflow-nodes", "comfyui-videohelpersuite", "rgthree-comfy"]
 models = []
 
+[tool.comfygit.workflows.audio_ace_step_1_5_edit]
+path = "workflows/audio_ace_step_1_5_edit.json"
+nodes = ["comfyui-videohelpersuite", "comfyui_ryanonyheinside"]
+
+[[tool.comfygit.workflows.audio_ace_step_1_5_edit.models]]
+filename = "ace_step_1.5_turbo_aio.safetensors"
+category = "checkpoints"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "1", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "ace_step_1.5_turbo_aio.safetensors"}]
+hash = "6350a8e16134698f"
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -319,6 +349,7 @@ eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relati
 343e4ddfba72e5bf = {filename = "ernie-image-prompt-enhancer.safetensors", size = 6877439999, relative_path = "text_encoders/ernie-image-prompt-enhancer.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/text_encoders/ernie-image-prompt-enhancer.safetensors"]}
 5b9574ecd29d05d0 = {filename = "qwen_3_8b_fp8mixed.safetensors", size = 8664848742, relative_path = "text_encoders/qwen_3_8b_fp8mixed.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/flux2-klein-9B/resolve/main/split_files/text_encoders/qwen_3_8b_fp8mixed.safetensors"]}
 0ad08392547a537a = {filename = "flux-2-klein-9b-kv-fp8.safetensors", size = 9818935984, relative_path = "diffusion_models/flux-2-klein-9b-kv-fp8.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv-fp8/resolve/main/flux-2-klein-9b-kv-fp8.safetensors"]}
+6350a8e16134698f = {filename = "ace_step_1.5_turbo_aio.safetensors", size = 10025478736, relative_path = "checkpoints/ace_step_1.5_turbo_aio.safetensors", category = "checkpoints"}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
@@ -360,3 +391,20 @@ comfyui-videohelpersuite-879d1780 = [
 ]
 rgthree-comfy-c0668886 = []
 comfyui-basic-math-66850bf1 = []
+audio-general-466fd85e = [
+    "audiostretchy",
+    "librosa",
+    "torch-time-stretch",
+    "torchaudio",
+]
+ryanontheinside-27d1fcfb = [
+    "matplotlib",
+    "mido",
+    "opencv-contrib-python-headless>=4.5.0",
+    "openunmix",
+    "pillow",
+    "pygame",
+    "pymunk>=6.8.0,<7.0.0",
+    "scikit-image",
+    "scipy",
+]

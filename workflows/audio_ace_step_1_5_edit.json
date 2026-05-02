@@ -1,0 +1,1626 @@
+{
+  "id": "1321ed79-5bbf-44b4-a7f2-cc6914f8ed3c",
+  "revision": 0,
+  "last_node_id": 21,
+  "last_link_id": 37,
+  "links": [
+    [
+      1,
+      16,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      7,
+      16,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ],
+    [
+      8,
+      1,
+      2,
+      6,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      13,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      10,
+      13,
+      0,
+      8,
+      0,
+      "MODEL"
+    ],
+    [
+      12,
+      5,
+      0,
+      8,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      13,
+      6,
+      0,
+      8,
+      3,
+      "LATENT"
+    ],
+    [
+      14,
+      12,
+      0,
+      10,
+      0,
+      "NOISE"
+    ],
+    [
+      15,
+      8,
+      0,
+      10,
+      1,
+      "GUIDER"
+    ],
+    [
+      16,
+      9,
+      0,
+      10,
+      2,
+      "SAMPLER"
+    ],
+    [
+      17,
+      7,
+      0,
+      10,
+      3,
+      "SIGMAS"
+    ],
+    [
+      18,
+      8,
+      1,
+      10,
+      4,
+      "LATENT"
+    ],
+    [
+      19,
+      1,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      10,
+      1,
+      14,
+      0,
+      "LATENT"
+    ],
+    [
+      21,
+      1,
+      2,
+      14,
+      1,
+      "VAE"
+    ],
+    [
+      22,
+      14,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      23,
+      16,
+      0,
+      17,
+      0,
+      "AUDIO"
+    ],
+    [
+      24,
+      15,
+      0,
+      18,
+      0,
+      "AUDIO"
+    ],
+    [
+      31,
+      15,
+      0,
+      20,
+      0,
+      "AUDIO"
+    ],
+    [
+      32,
+      1,
+      1,
+      21,
+      0,
+      "CLIP"
+    ],
+    [
+      33,
+      3,
+      8,
+      21,
+      5,
+      "INT"
+    ],
+    [
+      34,
+      2,
+      0,
+      21,
+      6,
+      "INT"
+    ],
+    [
+      35,
+      3,
+      16,
+      21,
+      7,
+      "COMBO"
+    ],
+    [
+      36,
+      21,
+      0,
+      8,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      37,
+      21,
+      0,
+      5,
+      0,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Load Model",
+      "bounding": [
+        261.1492814143214,
+        -145.31056421018627,
+        448,
+        182
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {},
+      "id": 1
+    },
+    {
+      "title": "Duration",
+      "bounding": [
+        261.1492814143214,
+        54.68943578981373,
+        450,
+        170
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {},
+      "id": 2
+    },
+    {
+      "title": "EXTEND REPAINT",
+      "bounding": [
+        764.4417814143217,
+        6.645286047686568,
+        640,
+        820
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {},
+      "id": 3
+    },
+    {
+      "title": "Guider",
+      "bounding": [
+        1445.8449100323544,
+        15.291210910605969,
+        1231.473021774977,
+        794.3779944148237
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {},
+      "id": 4
+    },
+    {
+      "title": "Output",
+      "bounding": [
+        2707.803145405084,
+        20.763913715067083,
+        1231.473021774977,
+        794.3779944148237
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {},
+      "id": 5
+    }
+  ],
+  "config": {},
+  "version": 0.4,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "PrimitiveNode",
+      "widgets_values": [
+        60,
+        "fixed"
+      ],
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            34
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "flags": {},
+      "pos": [
+        359.1492814143214,
+        130.68943578981373
+      ],
+      "size": [
+        278.0,
+        82.0
+      ],
+      "order": 0,
+      "mode": 0,
+      "title": "Song Duration (total after edit)"
+    },
+    {
+      "id": 6,
+      "type": "VAEEncodeAudio",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 7,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8,
+          "localized_name": "vae",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            13
+          ],
+          "localized_name": "LATENT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1150.0,
+        700.0
+      ],
+      "size": [
+        210.0,
+        46.0
+      ],
+      "order": 8,
+      "mode": 0
+    },
+    {
+      "id": 7,
+      "type": "BasicScheduler",
+      "widgets_values": [
+        "simple",
+        30,
+        1
+      ],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 9,
+          "localized_name": "model",
+          "slot_index": 0
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "localized_name": "scheduler",
+          "widget": {
+            "name": "scheduler"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "localized_name": "steps",
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 2
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "localized_name": "denoise",
+          "widget": {
+            "name": "denoise"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            17
+          ],
+          "localized_name": "SIGMAS",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1871.1492814143214,
+        334.68943578981373
+      ],
+      "size": [
+        270.0,
+        106.0
+      ],
+      "order": 10,
+      "mode": 0
+    },
+    {
+      "id": 9,
+      "type": "KSamplerSelect",
+      "widgets_values": [
+        "euler"
+      ],
+      "inputs": [
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "localized_name": "sampler_name",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            16
+          ],
+          "localized_name": "SAMPLER",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1871.1492814143214,
+        204.68943578981373
+      ],
+      "size": [
+        315.0,
+        58.0
+      ],
+      "order": 1,
+      "mode": 0
+    },
+    {
+      "id": 11,
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "## ACE-Step 1.5 Edit Workflow\n\nUnified workflow for extend and/or repaint operations.\n\n**Extend:** Add content before/after audio\n- Set extend_left_seconds and/or extend_right_seconds > 0\n\n**Repaint:** Regenerate a section\n- Set repaint_start_seconds >= 0 and repaint_end_seconds > start\n\n**Both:** Combine extend and repaint in one pass\n\n**Model:**\n- [ace_step_1.5_turbo_aio.safetensors](https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/checkpoints/ace_step_1.5_turbo_aio.safetensors)\n\n## [gimmi stars on github](https://github.com/ryanontheinside/ComfyUI_RyanOnTheInside)\n\n## [follow me on youtube](https://www.youtube.com/@ryanontheinside)\n"
+      ],
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "flags": {},
+      "pos": [
+        -236.51998657413333,
+        -185.68166328106963
+      ],
+      "size": [
+        420.0,
+        400.0
+      ],
+      "order": 2,
+      "mode": 0,
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 3,
+      "type": "AudioInfo",
+      "widgets_values": [
+        30
+      ],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "localized_name": "frame_rate",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "total_frames",
+          "type": "INT",
+          "localized_name": "total_frames",
+          "slot_index": 0
+        },
+        {
+          "name": "frames_per_beat",
+          "type": "INT",
+          "localized_name": "frames_per_beat",
+          "slot_index": 1
+        },
+        {
+          "name": "frames_per_bar",
+          "type": "INT",
+          "localized_name": "frames_per_bar",
+          "slot_index": 2
+        },
+        {
+          "name": "frames_per_quarter",
+          "type": "INT",
+          "localized_name": "frames_per_quarter",
+          "slot_index": 3
+        },
+        {
+          "name": "frames_per_eighth",
+          "type": "INT",
+          "localized_name": "frames_per_eighth",
+          "slot_index": 4
+        },
+        {
+          "name": "audio_duration",
+          "type": "FLOAT",
+          "localized_name": "audio_duration",
+          "slot_index": 5
+        },
+        {
+          "name": "beats_per_second",
+          "type": "FLOAT",
+          "localized_name": "beats_per_second",
+          "slot_index": 6
+        },
+        {
+          "name": "detected_bpm",
+          "type": "FLOAT",
+          "links": [],
+          "localized_name": "detected_bpm",
+          "slot_index": 7
+        },
+        {
+          "name": "detected_bpm_rounded",
+          "type": "INT",
+          "links": [
+            33
+          ],
+          "localized_name": "detected_bpm_rounded",
+          "slot_index": 8
+        },
+        {
+          "name": "sample_rate",
+          "type": "INT",
+          "localized_name": "sample_rate",
+          "slot_index": 9
+        },
+        {
+          "name": "num_channels",
+          "type": "INT",
+          "localized_name": "num_channels",
+          "slot_index": 10
+        },
+        {
+          "name": "num_samples",
+          "type": "INT",
+          "localized_name": "num_samples",
+          "slot_index": 11
+        },
+        {
+          "name": "max_amplitude",
+          "type": "FLOAT",
+          "localized_name": "max_amplitude",
+          "slot_index": 12
+        },
+        {
+          "name": "mean_amplitude",
+          "type": "FLOAT",
+          "localized_name": "mean_amplitude",
+          "slot_index": 13
+        },
+        {
+          "name": "rms_amplitude",
+          "type": "FLOAT",
+          "localized_name": "rms_amplitude",
+          "slot_index": 14
+        },
+        {
+          "name": "bit_depth",
+          "type": "STRING",
+          "localized_name": "bit_depth",
+          "slot_index": 15
+        },
+        {
+          "name": "detected_key",
+          "type": "COMBO",
+          "links": [
+            35
+          ],
+          "localized_name": "detected_key",
+          "slot_index": 16
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AudioInfo",
+        "cnr_id": "comfyui_ryanontheinside",
+        "ver": "418dd269462f0f08096ae5ab899f991500f3a44c"
+      },
+      "flags": {},
+      "pos": [
+        349.1010256576013,
+        314.1789956585514
+      ],
+      "size": [
+        270.0,
+        378.0
+      ],
+      "order": 7,
+      "mode": 0
+    },
+    {
+      "id": 10,
+      "type": "SamplerCustomAdvanced",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 14,
+          "localized_name": "noise",
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 15,
+          "localized_name": "guider",
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 16,
+          "localized_name": "sampler",
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 17,
+          "localized_name": "sigmas",
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 18,
+          "localized_name": "latent_image",
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [],
+          "localized_name": "output",
+          "slot_index": 0
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": [
+            20
+          ],
+          "localized_name": "denoised_output",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        2327.3039309130986,
+        220.2170683486411
+      ],
+      "size": [
+        212.3638671875,
+        106.0
+      ],
+      "order": 14,
+      "mode": 0
+    },
+    {
+      "id": 14,
+      "type": "VAEDecodeAudio",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 20,
+          "localized_name": "samples",
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 21,
+          "localized_name": "vae",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            22
+          ],
+          "localized_name": "AUDIO",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        2774.678850395049,
+        145.9556615665654
+      ],
+      "size": [
+        190.0,
+        46.0
+      ],
+      "order": 15,
+      "mode": 0
+    },
+    {
+      "id": 12,
+      "type": "RandomNoise",
+      "widgets_values": [
+        990,
+        "fixed"
+      ],
+      "inputs": [
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "localized_name": "noise_seed",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            14
+          ],
+          "localized_name": "NOISE",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1881.1492814143214,
+        84.68943578981373
+      ],
+      "size": [
+        315.0,
+        82.0
+      ],
+      "order": 3,
+      "mode": 0
+    },
+    {
+      "id": 13,
+      "type": "ModelSamplingAuraFlow",
+      "widgets_values": [
+        3
+      ],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19,
+          "localized_name": "model",
+          "slot_index": 0
+        },
+        {
+          "name": "shift",
+          "type": "FLOAT",
+          "localized_name": "shift",
+          "widget": {
+            "name": "shift"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            9,
+            10
+          ],
+          "localized_name": "MODEL",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1483.3770112170293,
+        213.99568542833242
+      ],
+      "size": [
+        330.0,
+        60.0
+      ],
+      "order": 6,
+      "mode": 0
+    },
+    {
+      "id": 5,
+      "type": "ConditioningZeroOut",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 37,
+          "localized_name": "conditioning",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            12
+          ],
+          "localized_name": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        1549.6438846171673,
+        522.8995242470139
+      ],
+      "size": [
+        204.134765625,
+        26.0
+      ],
+      "order": 12,
+      "mode": 0
+    },
+    {
+      "id": 8,
+      "type": "ACEStep15NativeEditGuider",
+      "widgets_values": [
+        1,
+        50,
+        0,
+        -1,
+        -1
+      ],
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 10,
+          "localized_name": "model",
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 36,
+          "localized_name": "positive",
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 12,
+          "localized_name": "negative",
+          "slot_index": 2
+        },
+        {
+          "name": "source_latents",
+          "type": "LATENT",
+          "link": 13,
+          "localized_name": "source_latents",
+          "slot_index": 3
+        },
+        {
+          "name": "reference_latent",
+          "type": "LATENT",
+          "localized_name": "reference_latent",
+          "shape": 7,
+          "slot_index": 4
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "localized_name": "cfg",
+          "widget": {
+            "name": "cfg"
+          },
+          "slot_index": 5
+        },
+        {
+          "name": "extend_left_seconds",
+          "type": "FLOAT",
+          "localized_name": "extend_left_seconds",
+          "widget": {
+            "name": "extend_left_seconds"
+          },
+          "shape": 7,
+          "slot_index": 6
+        },
+        {
+          "name": "extend_right_seconds",
+          "type": "FLOAT",
+          "localized_name": "extend_right_seconds",
+          "widget": {
+            "name": "extend_right_seconds"
+          },
+          "shape": 7,
+          "slot_index": 7
+        },
+        {
+          "name": "repaint_start_seconds",
+          "type": "FLOAT",
+          "localized_name": "repaint_start_seconds",
+          "widget": {
+            "name": "repaint_start_seconds"
+          },
+          "shape": 7,
+          "slot_index": 8
+        },
+        {
+          "name": "repaint_end_seconds",
+          "type": "FLOAT",
+          "localized_name": "repaint_end_seconds",
+          "widget": {
+            "name": "repaint_end_seconds"
+          },
+          "shape": 7,
+          "slot_index": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "links": [
+            15
+          ],
+          "localized_name": "guider",
+          "slot_index": 0
+        },
+        {
+          "name": "output_latent",
+          "type": "LATENT",
+          "links": [
+            18
+          ],
+          "localized_name": "output_latent",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ACEStep15NativeEditGuider",
+        "cnr_id": "comfyui_ryanontheinside",
+        "ver": "98474ec06548c527400ca866ca65f2b4c477712b"
+      },
+      "flags": {},
+      "pos": [
+        1841.1492814143214,
+        504.68943578981373
+      ],
+      "size": [
+        449.1958984375,
+        234.0
+      ],
+      "order": 13,
+      "mode": 0
+    },
+    {
+      "id": 17,
+      "type": "PreviewAudio",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 23,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "localized_name": "audioUI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        3095.4712065784292,
+        649.9685267381775
+      ],
+      "size": [
+        270.0,
+        88.0
+      ],
+      "order": 9,
+      "mode": 0
+    },
+    {
+      "id": 18,
+      "type": "SaveAudioMP3",
+      "widgets_values": [
+        "audio/ace_step_edit",
+        "V0"
+      ],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 24,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "localized_name": "filename_prefix",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "quality",
+          "type": "COMBO",
+          "localized_name": "quality",
+          "widget": {
+            "name": "quality"
+          },
+          "slot_index": 2
+        },
+        {
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "localized_name": "audioUI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "slot_index": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        3104.678850395049,
+        225.9556615665654
+      ],
+      "size": [
+        550.0,
+        150.0
+      ],
+      "order": 17,
+      "mode": 4
+    },
+    {
+      "id": 15,
+      "type": "Knob",
+      "widgets_values": [
+        0.2,
+        0.05
+      ],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 22,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "knob",
+          "type": "FLOAT",
+          "localized_name": "knob",
+          "widget": {
+            "name": "knob"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "other_knob",
+          "type": "FLOAT",
+          "localized_name": "other_knob",
+          "widget": {
+            "name": "other_knob"
+          },
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            24,
+            31
+          ],
+          "localized_name": "AUDIO",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Knob",
+        "cnr_id": "comfyui_ryanontheinside",
+        "ver": "951b1318f8958bfc441c0bcbbf2fc0695e1d9278"
+      },
+      "flags": {},
+      "pos": [
+        2774.678850395049,
+        285.9556615665655
+      ],
+      "size": [
+        270.0,
+        122.0
+      ],
+      "order": 16,
+      "mode": 0
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "widgets_values": [
+        "ace_step_1.5_turbo_aio.safetensors"
+      ],
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "COMBO",
+          "localized_name": "ckpt_name",
+          "widget": {
+            "name": "ckpt_name"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ],
+          "localized_name": "MODEL",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            32
+          ],
+          "localized_name": "CLIP",
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8,
+            21
+          ],
+          "localized_name": "VAE",
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        271.1492814143214,
+        -75.31056421018627
+      ],
+      "size": [
+        428.0,
+        98.0
+      ],
+      "order": 4,
+      "mode": 0
+    },
+    {
+      "id": 21,
+      "type": "ACEStep15TaskTextEncode",
+      "widgets_values": [
+        "continue the melodic electronic track with soft synths",
+        "repaint",
+        "bass",
+        "",
+        120,
+        60,
+        "C major",
+        "4",
+        "en",
+        0,
+        "fixed",
+        2,
+        0.85,
+        0.9,
+        0,
+        0
+      ],
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 32,
+          "localized_name": "clip",
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "localized_name": "text",
+          "widget": {
+            "name": "text"
+          },
+          "slot_index": 1
+        },
+        {
+          "name": "task_type",
+          "type": "COMBO",
+          "localized_name": "task_type",
+          "widget": {
+            "name": "task_type"
+          },
+          "slot_index": 2
+        },
+        {
+          "name": "track_name",
+          "type": "COMBO",
+          "localized_name": "track_name",
+          "widget": {
+            "name": "track_name"
+          },
+          "shape": 7,
+          "slot_index": 3
+        },
+        {
+          "name": "lyrics",
+          "type": "STRING",
+          "localized_name": "lyrics",
+          "widget": {
+            "name": "lyrics"
+          },
+          "shape": 7,
+          "slot_index": 4
+        },
+        {
+          "name": "bpm",
+          "type": "INT",
+          "link": 33,
+          "localized_name": "bpm",
+          "widget": {
+            "name": "bpm"
+          },
+          "shape": 7,
+          "slot_index": 5
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "link": 34,
+          "localized_name": "duration",
+          "widget": {
+            "name": "duration"
+          },
+          "shape": 7,
+          "slot_index": 6
+        },
+        {
+          "name": "keyscale",
+          "type": "COMBO",
+          "link": 35,
+          "localized_name": "keyscale",
+          "widget": {
+            "name": "keyscale"
+          },
+          "shape": 7,
+          "slot_index": 7
+        },
+        {
+          "name": "timesignature",
+          "type": "COMBO",
+          "localized_name": "timesignature",
+          "widget": {
+            "name": "timesignature"
+          },
+          "shape": 7,
+          "slot_index": 8
+        },
+        {
+          "name": "language",
+          "type": "COMBO",
+          "localized_name": "language",
+          "widget": {
+            "name": "language"
+          },
+          "shape": 7,
+          "slot_index": 9
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "localized_name": "seed",
+          "widget": {
+            "name": "seed"
+          },
+          "shape": 7,
+          "slot_index": 10
+        },
+        {
+          "name": "cfg_scale",
+          "type": "FLOAT",
+          "localized_name": "cfg_scale",
+          "widget": {
+            "name": "cfg_scale"
+          },
+          "shape": 7,
+          "slot_index": 11
+        },
+        {
+          "name": "temperature",
+          "type": "FLOAT",
+          "localized_name": "temperature",
+          "widget": {
+            "name": "temperature"
+          },
+          "shape": 7,
+          "slot_index": 12
+        },
+        {
+          "name": "top_p",
+          "type": "FLOAT",
+          "localized_name": "top_p",
+          "widget": {
+            "name": "top_p"
+          },
+          "shape": 7,
+          "slot_index": 13
+        },
+        {
+          "name": "top_k",
+          "type": "INT",
+          "localized_name": "top_k",
+          "widget": {
+            "name": "top_k"
+          },
+          "shape": 7,
+          "slot_index": 14
+        },
+        {
+          "name": "min_p",
+          "type": "FLOAT",
+          "localized_name": "min_p",
+          "widget": {
+            "name": "min_p"
+          },
+          "shape": 7,
+          "slot_index": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            36,
+            37
+          ],
+          "localized_name": "conditioning",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ACEStep15TaskTextEncode",
+        "cnr_id": "comfyui_ryanontheinside",
+        "ver": "dfb20755f852feb95d88bc39f9c00a6dc1a96d9d"
+      },
+      "flags": {},
+      "pos": [
+        859.0777248480929,
+        126.52324786332719
+      ],
+      "size": [
+        400.0,
+        478.0
+      ],
+      "order": 11,
+      "mode": 0
+    },
+    {
+      "id": 20,
+      "type": "PreviewAudio",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 31,
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "localized_name": "audioUI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "slot_index": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.2"
+      },
+      "flags": {},
+      "pos": [
+        3135.2957876492387,
+        456.13105221252147
+      ],
+      "size": [
+        512.6491099499931,
+        95.86364427610226
+      ],
+      "order": 18,
+      "mode": 0
+    },
+    {
+      "id": 16,
+      "type": "VHS_LoadAudioUpload",
+      "widgets_values": {
+        "audio": "funk-house-saas-demo.mp3",
+        "start_time": 25,
+        "duration": 40,
+        "audiopreview": {
+          "params": {
+            "filename": "funk-house-saas-demo.mp3",
+            "type": "input",
+            "start_time": 25,
+            "duration": 40
+          }
+        }
+      },
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "COMBO",
+          "localized_name": "audio",
+          "widget": {
+            "name": "audio"
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "start_time",
+          "type": "FLOAT",
+          "localized_name": "start_time",
+          "widget": {
+            "name": "start_time"
+          },
+          "shape": 7,
+          "slot_index": 1
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "localized_name": "duration",
+          "widget": {
+            "name": "duration"
+          },
+          "shape": 7,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            1,
+            7,
+            23
+          ],
+          "localized_name": "audio",
+          "slot_index": 0
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "localized_name": "duration",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_LoadAudioUpload",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7"
+      },
+      "flags": {},
+      "pos": [
+        -28.650631176130574,
+        355.49729021594396
+      ],
+      "size": [
+        330.3632741815097,
+        256.2369744543398
+      ],
+      "order": 5,
+      "mode": 0
+    }
+  ],
+  "extra": {
+    "ds": {
+      "scale": 1.0789988691420798,
+      "offset": [
+        464.2529980509853,
+        103.51253220863583
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  }
+}
