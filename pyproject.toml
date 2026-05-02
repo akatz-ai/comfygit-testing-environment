@@ -81,6 +81,42 @@ download_url = "https://cdn.comfy.org/akatz/comfyui-akatz-nodes/1.11.1/node.zip"
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.comfyui-depthanythingv2]
+name = "ComfyUI-DepthAnythingV2"
+registry_id = "comfyui-depthanythingv2"
+repository = "https://github.com/kijai/ComfyUI-DepthAnythingV2"
+version = "1.0.2"
+download_url = "https://cdn.comfy.org/kijai/comfyui-depthanythingv2/1.0.2/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-basic-math]
+name = "ComfyUI-Basic-Math"
+registry_id = "comfyui-basic-math"
+repository = "https://github.com/akatz-ai/ComfyUI-Basic-Math"
+version = "0.0.6"
+download_url = "https://cdn.comfy.org/akatz/comfyui-basic-math/0.0.6/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-videohelpersuite]
+name = "ComfyUI-VideoHelperSuite"
+registry_id = "comfyui-videohelpersuite"
+repository = "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+version = "1.7.9"
+download_url = "https://cdn.comfy.org/kosinkadink/comfyui-videohelpersuite/1.7.9/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-depthflow-nodes]
+name = "ComfyUI-Depthflow-Nodes"
+registry_id = "comfyui-depthflow-nodes"
+repository = "https://github.com/akatz-ai/ComfyUI-Depthflow-Nodes"
+version = "1.2.3"
+download_url = "https://cdn.comfy.org/akatz/comfyui-depthflow-nodes/1.2.3/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -270,6 +306,11 @@ status = "resolved"
 nodes = [{node_id = "127", node_type = "VAELoader", widget_idx = 0, widget_value = "flux2-vae.safetensors"}]
 hash = "eb18063e6259e230"
 
+[tool.comfygit.workflows.depthflow_showcase_v2_1]
+path = "workflows/depthflow_showcase_v2_1.json"
+nodes = ["comfyui-basic-math", "comfyui-depthanythingv2", "comfyui-depthflow-nodes", "comfyui-videohelpersuite", "rgthree-comfy"]
+models = []
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -281,6 +322,7 @@ eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relati
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
+constraint-dependencies = ["attrs<25.4", "click<8.2", "glfw<2.10", "huggingface-hub<0.37", "pillow<11.4", "pydantic<2.12", "pydantic-core<2.34", "requests<2.33", "rich<13.10", "scipy<1.16", "tokenizers<0.22", "tomlkit<0.14", "transformers<4.54", "typer<0.16", "uv<0.8", "xxhash<3.6"]
 [dependency-groups]
 comfygit-manager-b2d41ad7 = [
     "comfygit-core==0.3.22",
@@ -295,6 +337,16 @@ comfyui-akatz-nodes-7fa97fd9 = [
     "pydub",
     "torch",
 ]
+comfyui-depthanythingv2-7a4a3b7f = [
+    "accelerate",
+    "huggingface-hub",
+]
+comfyui-depthflow-nodes-06684be3 = [
+    "depthflow==0.9.1",
+    "numpy",
+    "opencv-contrib-python-headless",
+    "pydantic",
+]
 comfyui-kjnodes-f4971021 = [
     "color-matcher",
     "matplotlib",
@@ -302,4 +354,9 @@ comfyui-kjnodes-f4971021 = [
     "opencv-contrib-python-headless",
     "pillow>=10.3.0",
 ]
+comfyui-videohelpersuite-879d1780 = [
+    "imageio-ffmpeg",
+    "opencv-contrib-python-headless",
+]
 rgthree-comfy-c0668886 = []
+comfyui-basic-math-66850bf1 = []
