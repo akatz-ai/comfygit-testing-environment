@@ -162,6 +162,15 @@ download_url = "https://cdn.comfy.org/fannovel16/comfyui_controlnet_aux/1.1.5/no
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.akatz-loop-nodes]
+name = "Akatz-Loop-Nodes"
+registry_id = "akatz-loop-nodes"
+repository = "https://github.com/akatz-ai/Akatz-Loop-Nodes"
+version = "0.1.3"
+download_url = "https://cdn.comfy.org/akatz/akatz-loop-nodes/0.1.3/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -529,4 +538,7 @@ comfyui-controlnet-aux-1c5a1427 = [
     "trimesh[easy]",
     "yacs",
     "yapf",
+]
+akatz-loop-nodes-c6c1fb8e = [
+    "opencv-contrib-python-headless",
 ]
