@@ -216,6 +216,15 @@ download_url = "https://cdn.comfy.org/mickmumpitz/comfyui-mickmumpitz-nodes/1.2.
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.comfyui-depthcrafter-nodes]
+name = "ComfyUI-DepthCrafter-Nodes"
+registry_id = "comfyui-depthcrafter-nodes"
+repository = "https://github.com/akatz-ai/ComfyUI-DepthCrafter-Nodes"
+version = "1.2.0"
+download_url = "https://cdn.comfy.org/akatz/comfyui-depthcrafter-nodes/1.2.0/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -543,6 +552,11 @@ path = "workflows/Single-Speaker.json"
 nodes = ["VibeVoice-ComfyUI"]
 models = []
 
+[tool.comfygit.workflows.DepthCrafterExample]
+path = "workflows/DepthCrafterExample.json"
+nodes = ["comfyui-depthcrafter-nodes", "comfyui-videohelpersuite", "rgthree-comfy"]
+models = []
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -713,3 +727,8 @@ mickmumpitz-nodes-1b1334b0 = [
     "pillow>=9.0.0",
 ]
 comfyui-flux-continuum-8e4cfa6f = []
+comfyui-depthcrafter-nodes-bf51ed4d = [
+    "accelerate>=0.17.0",
+    "diffusers>=0.29.1",
+    "torch",
+]
