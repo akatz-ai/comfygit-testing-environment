@@ -457,10 +457,10 @@ eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relati
 38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae"}
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models"}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders"}
-8157223ca0c385d4 = {filename = "qwen_image_vae.safetensors", size = 253806246, relative_path = "vae/qwen_image_vae.safetensors", category = "vae"}
-e7632309aa8470b9 = {filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors", size = 9384670680, relative_path = "text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors", category = "text_encoders"}
-40690b918c1e3e48 = {filename = "qwen_image_edit_2509_fp8_e4m3fn.safetensors", size = 20430698424, relative_path = "diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors", category = "diffusion_models"}
-e0e2c73aa200902b = {filename = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", category = "loras"}
+8157223ca0c385d4 = {filename = "qwen_image_vae.safetensors", size = 253806246, relative_path = "vae/qwen_image_vae.safetensors", category = "vae", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"]}
+e7632309aa8470b9 = {filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors", size = 9384670680, relative_path = "text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"]}
+40690b918c1e3e48 = {filename = "qwen_image_edit_2509_fp8_e4m3fn.safetensors", size = 20430698424, relative_path = "diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors"]}
+e0e2c73aa200902b = {filename = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", category = "loras", sources = ["https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
