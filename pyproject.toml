@@ -409,6 +409,42 @@ path = "workflows/6_custom_nodes_7_models.json"
 nodes = ["VibeVoice-ComfyUI", "comfyui-easy-use", "comfyui-kjnodes", "comfyui-videohelpersuite", "comfyui_controlnet_aux", "rgthree-comfy"]
 models = []
 
+[tool.comfygit.workflows.image_qwen_image_edit_2509_loop]
+path = "workflows/image_qwen_image_edit_2509_loop.json"
+nodes = ["akatz-loop-nodes"]
+
+[[tool.comfygit.workflows.image_qwen_image_edit_2509_loop.models]]
+filename = "qwen_image_vae.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "e19adb51-3d61-44be-b929-bed98848f3c1:439", node_type = "VAELoader", widget_idx = 0, widget_value = "qwen_image_vae.safetensors"}]
+hash = "8157223ca0c385d4"
+
+[[tool.comfygit.workflows.image_qwen_image_edit_2509_loop.models]]
+filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "e19adb51-3d61-44be-b929-bed98848f3c1:440", node_type = "CLIPLoader", widget_idx = 0, widget_value = "qwen_2.5_vl_7b_fp8_scaled.safetensors"}]
+hash = "e7632309aa8470b9"
+
+[[tool.comfygit.workflows.image_qwen_image_edit_2509_loop.models]]
+filename = "qwen_image_edit_2509_fp8_e4m3fn.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "e19adb51-3d61-44be-b929-bed98848f3c1:448", node_type = "UNETLoader", widget_idx = 0, widget_value = "qwen_image_edit_2509_fp8_e4m3fn.safetensors"}]
+hash = "40690b918c1e3e48"
+
+[[tool.comfygit.workflows.image_qwen_image_edit_2509_loop.models]]
+filename = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors"
+category = "loras"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "e19adb51-3d61-44be-b929-bed98848f3c1:449", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors"}]
+hash = "e0e2c73aa200902b"
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -421,6 +457,10 @@ eb18063e6259e230 = {filename = "flux2-vae.safetensors", size = 336213556, relati
 38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae"}
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models"}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders"}
+8157223ca0c385d4 = {filename = "qwen_image_vae.safetensors", size = 253806246, relative_path = "vae/qwen_image_vae.safetensors", category = "vae"}
+e7632309aa8470b9 = {filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors", size = 9384670680, relative_path = "text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors", category = "text_encoders"}
+40690b918c1e3e48 = {filename = "qwen_image_edit_2509_fp8_e4m3fn.safetensors", size = 20430698424, relative_path = "diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors", category = "diffusion_models"}
+e0e2c73aa200902b = {filename = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.safetensors", category = "loras"}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
