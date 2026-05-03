@@ -538,6 +538,11 @@ status = "resolved"
 nodes = [{node_id = "3327", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "Wan2.1_T2V_14B_FusionX_LoRA.safetensors"}]
 hash = "9fa71f54a2fc0d60"
 
+[tool.comfygit.workflows.Single-Speaker]
+path = "workflows/Single-Speaker.json"
+nodes = ["VibeVoice-ComfyUI"]
+models = []
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
