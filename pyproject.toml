@@ -624,6 +624,79 @@ status = "resolved"
 nodes = [{node_id = "14", node_type = "CLIPLoader", widget_idx = 0, widget_value = "Z-Image\\qwen_3_4b.safetensors"}]
 hash = "fe0e63500dafbced"
 
+[tool.comfygit.workflows.z-image.execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/z-image.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-05-04T19:02:36.537819Z"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "6"
+required = true
+display_name = "prompt"
+widget_idx = 0
+field_key = "text"
+default = "blue eyes"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "width"
+type = "number"
+node_id = "15"
+required = true
+display_name = "width"
+widget_idx = 0
+field_key = "width"
+default = 1024
+min = 16
+max = 4096
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "height"
+type = "number"
+node_id = "15"
+required = true
+display_name = "height"
+widget_idx = 1
+field_key = "height"
+default = 1024
+min = 16
+max = 4096
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "number"
+node_id = "16"
+required = true
+display_name = "seed"
+widget_idx = 0
+field_key = "seed"
+default = 3021
+min = 0
+max = "18446744073709552000"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "steps"
+type = "number"
+node_id = "16"
+required = true
+display_name = "steps"
+widget_idx = 2
+field_key = "steps"
+default = 12
+min = 1
+max = 100
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.outputs]]
+name = "save_image"
+type = "image"
+node_id = "8"
+display_name = "Save Image"
+selector = "primary"
+
 [tool.comfygit.workflows.6_custom_nodes_7_models]
 path = "workflows/6_custom_nodes_7_models.json"
 nodes = ["VibeVoice-ComfyUI", "comfyui-easy-use", "comfyui-kjnodes", "comfyui-videohelpersuite", "comfyui_controlnet_aux", "rgthree-comfy"]
