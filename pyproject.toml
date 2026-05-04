@@ -225,6 +225,172 @@ download_url = "https://cdn.comfy.org/akatz/comfyui-depthcrafter-nodes/1.2.0/nod
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.comfyui-advanced-controlnet]
+name = "ComfyUI-Advanced-ControlNet"
+registry_id = "comfyui-advanced-controlnet"
+repository = "https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet"
+version = "1.5.7"
+download_url = "https://cdn.comfy.org/kosinkadink/comfyui-advanced-controlnet/1.5.7/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.mikey_nodes]
+name = "mikey_nodes"
+registry_id = "mikey_nodes"
+repository = "https://github.com/bash-j/mikey_nodes"
+version = "1.0.5"
+download_url = "https://cdn.comfy.org/humblemikey/mikey_nodes/1.0.5/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui_essentials]
+name = "ComfyUI_essentials"
+registry_id = "comfyui_essentials"
+repository = "https://github.com/cubiq/ComfyUI_essentials"
+version = "1.1.0"
+download_url = "https://cdn.comfy.org/matteo/comfyui_essentials/1.1.0/node.tar.gz"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.derfuu_comfyui_moddednodes]
+name = "Derfuu_ComfyUI_ModdedNodes"
+registry_id = "derfuu_comfyui_moddednodes"
+repository = "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes"
+version = "1.0.1"
+download_url = "https://cdn.comfy.org/derfuu/derfuu_comfyui_moddednodes/1.0.1/node.tar.gz"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-animatediff-evolved]
+name = "ComfyUI-AnimateDiff-Evolved"
+registry_id = "comfyui-animatediff-evolved"
+repository = "https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved"
+version = "1.5.7"
+download_url = "https://cdn.comfy.org/kosinkadink/comfyui-animatediff-evolved/1.5.7/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui_ipadapter_plus]
+name = "ComfyUI_IPAdapter_plus"
+registry_id = "comfyui_ipadapter_plus"
+repository = "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+version = "2.0.0"
+download_url = "https://cdn.comfy.org/matteo/comfyui_ipadapter_plus/2.0.0/node.tar.gz"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.efficiency-nodes-comfyui]
+name = "efficiency-nodes-comfyui"
+registry_id = "efficiency-nodes-comfyui"
+repository = "https://github.com/jags111/efficiency-nodes-comfyui"
+version = "1.0.9"
+download_url = "https://cdn.comfy.org/jags111/efficiency-nodes-comfyui/1.0.9/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-florence2]
+name = "ComfyUI-Florence2"
+registry_id = "comfyui-florence2"
+repository = "https://github.com/kijai/ComfyUI-Florence2"
+version = "1.0.9"
+download_url = "https://cdn.comfy.org/kijai/comfyui-florence2/1.0.9/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-segment-anything-2]
+name = "ComfyUI-segment-anything-2"
+registry_id = "comfyui-segment-anything-2"
+repository = "https://github.com/kijai/ComfyUI-segment-anything-2"
+version = "1.0.2"
+download_url = "https://cdn.comfy.org/kijai/comfyui-segment-anything-2/1.0.2/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfy-mtb]
+name = "comfy-mtb"
+registry_id = "comfy-mtb"
+repository = "https://github.com/melMass/comfy_mtb"
+version = "0.5.4"
+download_url = "https://cdn.comfy.org/mel/comfy-mtb/0.5.4/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui_fizznodes]
+name = "ComfyUI_FizzNodes"
+registry_id = "comfyui_fizznodes"
+repository = "https://github.com/FizzleDorf/ComfyUI_FizzNodes"
+version = "1.0.2"
+download_url = "https://cdn.comfy.org/fizzledorf/comfyui_fizznodes/1.0.2/node.tar.gz"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.cg-use-everywhere]
+name = "CG Use Everywhere"
+registry_id = "cg-use-everywhere"
+repository = "https://github.com/chrisgoringe/cg-use-everywhere"
+version = "7.8.0"
+download_url = "https://cdn.comfy.org/chrisgoringe/cg-use-everywhere/7.8.0/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-allor-fork]
+name = "ComfyUI-Allor-Fork"
+registry_id = "comfyui-allor-fork"
+repository = "https://github.com/pxl-pshr/ComfyUI-Allor-Fork"
+version = "1.0.1"
+download_url = "https://cdn.comfy.org/pxlpshr/comfyui-allor-fork/1.0.1/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.SeargeSDXL]
+name = "seargesdxl"
+registry_id = "SeargeSDXL"
+repository = "https://github.com/seargedp/seargesdxl"
+version = "2eb5edbc712329d77d1a2f5f1e6c5e64397a4a83"
+source = "git"
+criticality = "required"
+
+[tool.comfygit.nodes.ComfyUI_Comfyroll_CustomNodes]
+name = "comfyui_comfyroll_customnodes"
+registry_id = "ComfyUI_Comfyroll_CustomNodes"
+repository = "https://github.com/suzie1/comfyui_comfyroll_customnodes"
+version = "d78b780ae43fcf8c6b7c6505e6ffb4584281ceca"
+source = "git"
+criticality = "required"
+
+[tool.comfygit.nodes.ComfyLiterals]
+name = "comfyliterals"
+registry_id = "ComfyLiterals"
+repository = "https://github.com/m1kep/comfyliterals"
+version = "bdddb08ca82d90d75d97b1d437a652e0284a32ac"
+source = "git"
+criticality = "required"
+
+[tool.comfygit.nodes.ComfyUI-Crystools]
+name = "ComfyUI-Crystools"
+registry_id = "ComfyUI-Crystools"
+repository = "https://github.com/crystian/ComfyUI-Crystools"
+version = "1.27.4"
+download_url = "https://cdn.comfy.org/crystian/ComfyUI-Crystools/1.27.4/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-various]
+name = "comfyui-various"
+registry_id = "comfyui-various"
+repository = "https://github.com/jamesWalker55/comfyui-various.git"
+version = "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2"
+source = "git"
+criticality = "required"
+
+[tool.comfygit.nodes.ComfyUI-Image-Filters]
+name = "comfyui-image-filters"
+registry_id = "ComfyUI-Image-Filters"
+repository = "https://github.com/spacepxl/comfyui-image-filters"
+version = "bbb3fb0045461adf3602faeedaf40af57090d4e2"
+source = "git"
+criticality = "required"
+
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
 nodes = ["comfyui-kjnodes"]
@@ -557,6 +723,26 @@ path = "workflows/DepthCrafterExample.json"
 nodes = ["comfyui-depthcrafter-nodes", "comfyui-videohelpersuite", "rgthree-comfy"]
 models = []
 
+[tool.comfygit.workflows.EmanatingRings_v1_4]
+path = "workflows/EmanatingRings_v1_4.json"
+nodes = ["ComfyLiterals", "ComfyUI-Crystools", "ComfyUI-Image-Filters", "ComfyUI_Comfyroll_CustomNodes", "SeargeSDXL", "cg-use-everywhere", "comfy-mtb", "comfyui-advanced-controlnet", "comfyui-akatz-nodes", "comfyui-allor-fork", "comfyui-animatediff-evolved", "comfyui-depthanythingv2", "comfyui-florence2", "comfyui-kjnodes", "comfyui-segment-anything-2", "comfyui-videohelpersuite", "comfyui_controlnet_aux", "comfyui_essentials", "comfyui_fizznodes", "comfyui_ipadapter_plus", "comfyui_ryanonyheinside", "derfuu_comfyui_moddednodes", "efficiency-nodes-comfyui", "mikey_nodes", "rgthree-comfy"]
+
+[tool.comfygit.workflows.EmanatingRings_v1_4.custom_node_map]
+ImageConstant = "ComfyUI-Image-Filters"
+"Note Plus (mtb)" = "comfy-mtb"
+JWFloatToInteger = false
+JWFloatMul = false
+"Switch any [Crystools]" = "ComfyUI-Crystools"
+"Fast Muter (rgthree)" = "rgthree-comfy"
+
+[[tool.comfygit.workflows.EmanatingRings_v1_4.models]]
+filename = "vae-ft-mse-840000-ema-pruned.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "1326", node_type = "VAELoader", widget_idx = 0, widget_value = "vae-ft-mse-840000-ema-pruned.safetensors"}]
+hash = "bf5901e427f25f46"
+
 [tool.comfygit.models]
 1fd237d4d78fa19f = {filename = "v1-5-pruned-emaonly-fp16.safetensors", size = 2132696762, relative_path = "checkpoints/v1-5-pruned-emaonly-fp16.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Comfy-Org/stable-diffusion-v1-5-archive/resolve/main/v1-5-pruned-emaonly-fp16.safetensors?download=true"]}
 9d61c3ab2eae6bb3 = {filename = "ernie-image.safetensors", size = 16067025480, relative_path = "diffusion_models/ernie-image.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors"]}
@@ -578,6 +764,7 @@ e0e2c73aa200902b = {filename = "Qwen-Image-Edit-2509-Lightning-4steps-V1.0-bf16.
 0c6ed0ab160a3bee = {filename = "Lenovo.safetensors", size = 306846851, relative_path = "loras/Lenovo.safetensors", category = "loras", sources = ["https://civitai.com/api/download/models/2066914"]}
 0d1f6ccebec1045f = {filename = "wan_2.1_vae.safetensors", size = 253815318, relative_path = "vae/wan_2.1_vae.safetensors", category = "vae"}
 2b00ebab18f0a8e5 = {filename = "umt5_xxl_fp8_e4m3fn_scaled.safetensors", size = 6735906897, relative_path = "text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors", category = "text_encoders"}
+bf5901e427f25f46 = {filename = "vae-ft-mse-840000-ema-pruned.safetensors", size = 334641190, relative_path = "vae/vae-ft-mse-840000-ema-pruned.safetensors", category = "vae", sources = ["https://huggingface.co/EvilEngine/vae-ft-mse-840000-ema-pruned/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
@@ -731,4 +918,73 @@ comfyui-depthcrafter-nodes-bf51ed4d = [
     "accelerate>=0.17.0",
     "diffusers>=0.29.1",
     "torch",
+]
+comfyui-essentials-1659bc27 = [
+    "colour-science",
+    "numba",
+    "pixeloe",
+    "rembg",
+    "transparent-background",
+]
+efficiency-nodes-comfyui-d90d9d2d = [
+    "clip-interrogator",
+    "simpleeval",
+]
+comfyui-florence2-ed4ceebd = [
+    "accelerate>=0.26.0",
+    "matplotlib",
+    "peft",
+    "pillow>=10.2.0",
+    "timm",
+    "transformers>=4.39.0,!=4.50.*",
+]
+comfy-mtb-e5f6adb3 = [
+    "cachetools",
+    "imageio-ffmpeg",
+    "matplotlib",
+    "onnxruntime-gpu",
+    "pillow",
+    "qrcode[pil]",
+    "rembg",
+    "requirements-parser",
+    "rich",
+    "rich-argparse",
+    "transformers",
+]
+comfyui-fizznodes-bb0a0ce0 = [
+    "numexpr",
+    "numpy",
+    "pandas",
+]
+comfyui-allor-fork-41a611cd = [
+    "gitpython",
+    "onnx",
+    "opencv-contrib-python-headless",
+    "pillow",
+    "rembg",
+]
+comfyui-advanced-controlnet-4c426b59 = []
+mikey-nodes-cc54f53b = []
+derfuu-comfyui-moddednodes-e28c6e1c = []
+comfyui-animatediff-evolved-73c9d272 = []
+comfyui-ipadapter-plus-b91bdd9b = []
+comfyui-segment-anything-2-0d066ec1 = []
+cg-use-everywhere-32895f28 = []
+seargesdxl-5e4cc001 = []
+comfyui-comfyroll-customnodes-bd75a832 = []
+comfyliterals-c84ba09c = []
+comfyui-crystools-13e67f5a = [
+    "deepdiff",
+    "jetson-stats ; platform_machine == 'aarch64'",
+    "numpy",
+    "piexif",
+    "pillow",
+    "py-cpuinfo",
+    "pynvml ; platform_machine != 'aarch64'",
+    "torch",
+]
+comfyui-various-f38ca87e = []
+comfyui-image-filters-077d977a = [
+    "opencv-contrib-python-headless>=4.7.0.72",
+    "pymatting",
 ]
