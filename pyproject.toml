@@ -56,8 +56,124 @@ download_url = "https://cdn.comfy.org/akatz/comfygit-manager/0.0.24/node.zip"
 source = "development"
 criticality = "required"
 
+[tool.comfygit.nodes.comfyui-kjnodes]
+name = "ComfyUI-KJNodes"
+registry_id = "comfyui-kjnodes"
+repository = "https://github.com/kijai/ComfyUI-KJNodes"
+version = "1.3.9"
+download_url = "https://cdn.comfy.org/kijai/comfyui-kjnodes/1.3.9/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.workflows.z-image]
+path = "workflows/z-image.json"
+nodes = ["comfyui-kjnodes"]
+
+[tool.comfygit.workflows.z-image.execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/z-image.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-05-05T04:48:34.380143Z"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "6"
+required = true
+display_name = "prompt"
+widget_idx = 0
+field_key = "text"
+default = "blue eyes"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "width"
+type = "number"
+node_id = "15"
+required = true
+display_name = "width"
+widget_idx = 0
+field_key = "width"
+default = 1024
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "height"
+type = "number"
+node_id = "15"
+required = true
+display_name = "height"
+widget_idx = 1
+field_key = "height"
+default = "1024"
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "number"
+node_id = "16"
+required = true
+display_name = "seed"
+widget_idx = 0
+field_key = "seed"
+default = 3021
+min = 0
+max = "18446744073709552000"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "steps"
+type = "number"
+node_id = "16"
+required = true
+display_name = "steps"
+widget_idx = 2
+field_key = "steps"
+default = 12
+min = 1
+max = 100
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.outputs]]
+name = "save_image"
+type = "image"
+node_id = "8"
+display_name = "Save Image"
+selector = "primary"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "z_image_turbo_bf16.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "1", node_type = "UNETLoader", widget_idx = 0, widget_value = "z_image_turbo_bf16.safetensors"}]
+hash = "86628cf98ae14c4b"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "qwen_3_4b.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "14", node_type = "CLIPLoader", widget_idx = 0, widget_value = "qwen_3_4b.safetensors"}]
+hash = "fe0e63500dafbced"
+
+[[tool.comfygit.workflows.z-image.models]]
+filename = "ae.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "2", node_type = "VAELoader", widget_idx = 0, widget_value = "ae.safetensors"}]
+hash = "38f082e7b86d146b"
+
+[tool.comfygit.models]
+86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
+fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://civitai.com/api/download/models/2442540?type=Model&format=SafeTensor&size=full&fp=fp16"]}
+38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae", sources = ["https://civitai.com/api/download/models/2442479?type=Model&format=SafeTensor&size=full&fp=fp16"]}
+
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
+override-dependencies = ["uv>=0.10.0"]
 [dependency-groups]
 comfygit-manager-b2d41ad7 = [
     "comfygit-core==0.3.22",
@@ -65,4 +181,11 @@ comfygit-manager-b2d41ad7 = [
     "xxhash>=3.5.0",
     "zeroconf>=0.131.0",
 ]
-comfygit-system = ["uv>=0.7"]
+comfygit-system = ["uv>=0.10.0"]
+comfyui-kjnodes-f4971021 = [
+    "color-matcher",
+    "matplotlib",
+    "mss",
+    "opencv-contrib-python-headless",
+    "pillow>=10.3.0",
+]
