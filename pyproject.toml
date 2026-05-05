@@ -47,15 +47,6 @@ comfyui_version_type = "release"
 comfyui_commit_sha = "64b8457f55cd7fb54ca7a956d9c73b505e903e0c"
 python_version = "3.11"
 
-[tool.comfygit.nodes.comfygit-manager]
-name = "comfygit-manager"
-registry_id = "comfygit-manager"
-repository = "https://github.com/comfygit-ai/comfygit-manager"
-version = "0.0.24"
-download_url = "https://cdn.comfy.org/akatz/comfygit-manager/0.0.24/node.zip"
-source = "development"
-criticality = "required"
-
 [tool.comfygit.nodes.comfyui-kjnodes]
 name = "ComfyUI-KJNodes"
 registry_id = "comfyui-kjnodes"
@@ -175,12 +166,6 @@ fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relat
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
 override-dependencies = ["uv>=0.10.0"]
 [dependency-groups]
-comfygit-manager-b2d41ad7 = [
-    "comfygit-core==0.3.22",
-    "watchdog>=6.0.0",
-    "xxhash>=3.5.0",
-    "zeroconf>=0.131.0",
-]
 comfygit-system = ["uv>=0.10.0"]
 comfyui-kjnodes-f4971021 = [
     "color-matcher",
