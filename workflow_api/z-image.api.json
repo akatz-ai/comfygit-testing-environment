@@ -111,5 +111,33 @@
     "_meta": {
       "title": "KSampler"
     }
+  },
+  "20": {
+    "inputs": {
+      "value": 0
+    },
+    "class_type": "INTConstant",
+    "_meta": {
+      "title": "INT Constant"
+    }
+  },
+  "21": {
+    "inputs": {
+      "string": ""
+    },
+    "class_type": "StringConstant",
+    "_meta": {
+      "title": "String Constant"
+    }
+  },
+  "22": {
+    "inputs": {
+      "inputcount": 2,
+      "Update inputs": null
+    },
+    "class_type": "ImageBatchMulti",
+    "_meta": {
+      "title": "Image Batch Multi"
+    }
   }
 }
