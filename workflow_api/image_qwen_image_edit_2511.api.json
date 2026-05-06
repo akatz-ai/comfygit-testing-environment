@@ -21,15 +21,6 @@
       "title": "Load Image"
     }
   },
-  "83": {
-    "inputs": {
-      "image": "texture_fur.png"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
   "170:145": {
     "inputs": {
       "shift": 3.1,
@@ -92,10 +83,6 @@
       "image1": [
         "170:160",
         0
-      ],
-      "image2": [
-        "83",
-        0
       ]
     },
     "class_type": "TextEncodeQwenImageEditPlus",
@@ -116,10 +103,6 @@
       ],
       "image1": [
         "170:160",
-        0
-      ],
-      "image2": [
-        "83",
         0
       ]
     },

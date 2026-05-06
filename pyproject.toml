@@ -75,65 +75,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/z-image.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-06T03:22:44.103444Z"
-
-[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
-name = "prompt"
-type = "string"
-node_id = "6"
-required = true
-display_name = "Prompt"
-widget_idx = 0
-field_key = "text"
-default = "blue eyes"
-
-[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
-name = "width"
-type = "integer"
-node_id = "15"
-required = true
-display_name = "width"
-widget_idx = 0
-field_key = "width"
-default = 1024
-min = 16
-max = 2048
-
-[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
-name = "height"
-type = "integer"
-node_id = "15"
-required = true
-display_name = "height"
-widget_idx = 1
-field_key = "height"
-default = 1024
-min = 16
-max = 2048
-
-[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
-name = "seed"
-type = "number"
-node_id = "16"
-required = true
-display_name = "seed"
-widget_idx = 0
-field_key = "seed"
-default = 3021
-min = 0
-max = "18446744073709552000"
-
-[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
-name = "steps"
-type = "number"
-node_id = "16"
-required = true
-display_name = "steps"
-widget_idx = 2
-field_key = "steps"
-default = 12
-min = 1
-max = 100
+api_prompt_generated_at = "2026-05-06T18:09:55.824675Z"
 
 [[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
 name = "unet_name"
@@ -143,8 +85,78 @@ required = true
 display_name = "Model"
 widget_idx = 0
 field_key = "unet_name"
+api_node_id = "1"
+api_field_key = "unet_name"
 default = "z_image_turbo_bf16.safetensors"
 enum_values = ["z_image_turbo_bf16.safetensors", "zImageTurboAnime_aioBF16.safetensors"]
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "6"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+field_key = "text"
+api_node_id = "6"
+api_field_key = "text"
+default = "blue eyes"
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "width"
+type = "integer"
+node_id = "15"
+required = true
+display_name = "Width"
+widget_idx = 0
+field_key = "width"
+api_node_id = "15"
+api_field_key = "width"
+default = 1024
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "height"
+type = "integer"
+node_id = "15"
+required = true
+display_name = "Height"
+widget_idx = 1
+field_key = "height"
+api_node_id = "15"
+api_field_key = "height"
+default = 1024
+min = 16
+max = 2048
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "integer"
+node_id = "16"
+required = true
+display_name = "Seed"
+widget_idx = 0
+field_key = "seed"
+api_node_id = "16"
+api_field_key = "seed"
+default = 3021
+min = 0
+max = 9999999999
+
+[[tool.comfygit.workflows.z-image.execution_contract.contracts.default.inputs]]
+name = "steps"
+type = "integer"
+node_id = "16"
+required = true
+display_name = "Steps"
+widget_idx = 2
+field_key = "steps"
+api_node_id = "16"
+api_field_key = "steps"
+default = 20
+min = 1
+max = 100
 
 [[tool.comfygit.workflows.z-image.execution_contract.contracts.default.outputs]]
 name = "save_image"
@@ -186,7 +198,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/image_qwen_image_edit_2511.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-06T05:30:02.673823Z"
+api_prompt_generated_at = "2026-05-06T18:10:54.844527Z"
 
 [[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.inputs]]
 name = "prompt"
@@ -196,6 +208,8 @@ required = true
 display_name = "Prompt"
 widget_idx = 0
 field_key = "prompt"
+api_node_id = "170:151"
+api_field_key = "prompt"
 default = "Make it blue"
 
 [[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.inputs]]
@@ -206,9 +220,11 @@ required = true
 display_name = "Seed"
 widget_idx = 6
 field_key = "seed"
-default = "0"
+api_node_id = "170:169"
+api_field_key = "seed"
+default = 0
 min = 0
-max = "18446744073709552000"
+max = 99999999
 
 [[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.inputs]]
 name = "image"
@@ -218,6 +234,8 @@ required = true
 display_name = "Image"
 widget_idx = 0
 field_key = "image"
+api_node_id = "41"
+api_field_key = "image"
 default = ""
 
 [[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.outputs]]
@@ -294,6 +312,49 @@ status = "resolved"
 nodes = [{node_id = "c3c58f7e-2004-43ae-8b06-a956294bf7f4:221", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors"}]
 hash = "d50c050f56c8a6de"
 
+[tool.comfygit.workflows.video_ltx2_3_id_lora]
+path = "workflows/video_ltx2_3_id_lora.json"
+
+[[tool.comfygit.workflows.video_ltx2_3_id_lora.models]]
+filename = "ltx-2.3-22b-dev-fp8.safetensors"
+category = "checkpoints"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:335", node_type = "LTXVAudioVAELoader", widget_idx = 0, widget_value = "ltx-2.3-22b-dev-fp8.safetensors"}, {node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:317", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "ltx-2.3-22b-dev-fp8.safetensors"}, {node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:318", node_type = "LTXAVTextEncoderLoader", widget_idx = 1, widget_value = "ltx-2.3-22b-dev-fp8.safetensors"}]
+hash = "74d135b3301f9593"
+
+[[tool.comfygit.workflows.video_ltx2_3_id_lora.models]]
+filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+category = "unknown"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:313", node_type = "LatentUpscaleModelLoader", widget_idx = 0, widget_value = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"}]
+hash = "c1af86834f640459"
+
+[[tool.comfygit.workflows.video_ltx2_3_id_lora.models]]
+filename = "gemma_3_12B_it_fp4_mixed.safetensors"
+category = "unknown"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:318", node_type = "LTXAVTextEncoderLoader", widget_idx = 0, widget_value = "gemma_3_12B_it_fp4_mixed.safetensors"}]
+hash = "59cfa9ca80733ff9"
+
+[[tool.comfygit.workflows.video_ltx2_3_id_lora.models]]
+filename = "ltx-2.3-id-lora-talkvid-3k.safetensors"
+category = "loras"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:346", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2.3-id-lora-talkvid-3k.safetensors"}]
+hash = "1e2adef062b6e90f"
+
+[[tool.comfygit.workflows.video_ltx2_3_id_lora.models]]
+filename = "ltx-2.3-22b-distilled-lora-384.safetensors"
+category = "loras"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:293", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-lora-384.safetensors"}]
+hash = "02f44099be1afd16"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://civitai.com/api/download/models/2442540?type=Model&format=SafeTensor&size=full&fp=fp16"]}
@@ -304,6 +365,11 @@ e499b317654355a7 = {filename = "qwen_image_2512_fp8_e4m3fn.safetensors", size = 
 d50c050f56c8a6de = {filename = "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors", size = 1698951104, relative_path = "loras/Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors", category = "loras", sources = ["https://huggingface.co/lightx2v/Qwen-Image-2512-Lightning/resolve/main/Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors"]}
 a1ae1ecf3fb8e280 = {filename = "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", category = "loras", sources = ["https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors"]}
 09da89f624c1daa4 = {filename = "qwen_image_edit_2511_bf16.safetensors", size = 40861031560, relative_path = "diffusion_models/qwen_image_edit_2511_bf16.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_bf16.safetensors"]}
+59cfa9ca80733ff9 = {filename = "gemma_3_12B_it_fp4_mixed.safetensors", size = 9447702218, relative_path = "split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors", category = "unknown", sources = ["https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors"]}
+74d135b3301f9593 = {filename = "ltx-2.3-22b-dev-fp8.safetensors", size = 29145431166, relative_path = "checkpoints/ltx-2.3-22b-dev-fp8.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors"]}
+c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", size = 995743560, relative_path = "latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors", category = "unknown", sources = ["https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors?download=true"]}
+1e2adef062b6e90f = {filename = "ltx-2.3-id-lora-talkvid-3k.safetensors", size = 1157884304, relative_path = "loras/ltx-2.3-id-lora-talkvid-3k.safetensors", category = "loras", sources = ["https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx-2.3-id-lora-talkvid-3k.safetensors"]}
+02f44099be1afd16 = {filename = "ltx-2.3-22b-distilled-lora-384.safetensors", size = 7605507256, relative_path = "loras/ltx-2.3-22b-distilled-lora-384.safetensors", category = "loras", sources = ["https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled-lora-384.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
