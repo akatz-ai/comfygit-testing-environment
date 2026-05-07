@@ -92,6 +92,42 @@ download_url = "https://cdn.comfy.org/machinedelusions/ComfyUI-FL-VoxCPM/2.2.2/n
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.rgthree-comfy]
+name = "rgthree-comfy"
+registry_id = "rgthree-comfy"
+repository = "https://github.com/rgthree/rgthree-comfy"
+version = "1.0.2604070017"
+download_url = "https://cdn.comfy.org/rgthree/rgthree-comfy/1.0.2604070017/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-videohelpersuite]
+name = "ComfyUI-VideoHelperSuite"
+registry_id = "comfyui-videohelpersuite"
+repository = "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+version = "1.7.9"
+download_url = "https://cdn.comfy.org/kosinkadink/comfyui-videohelpersuite/1.7.9/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.ComfyUI-GGUF]
+name = "ComfyUI-GGUF"
+registry_id = "ComfyUI-GGUF"
+repository = "https://github.com/city96/ComfyUI-GGUF"
+version = "1.1.10"
+download_url = "https://cdn.comfy.org/city96/ComfyUI-GGUF/1.1.10/node.zip"
+source = "registry"
+criticality = "required"
+
+[tool.comfygit.nodes.comfyui-easy-use]
+name = "ComfyUI-Easy-Use"
+registry_id = "comfyui-easy-use"
+repository = "https://github.com/yolain/ComfyUI-Easy-Use"
+version = "1.3.6"
+download_url = "https://cdn.comfy.org/yolain/comfyui-easy-use/1.3.6/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows.z-image]
 path = "workflows/z-image.json"
 nodes = ["comfyui-kjnodes"]
@@ -436,7 +472,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/video_ltx2_3_ia2v.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-07T04:49:59.483857Z"
+api_prompt_generated_at = "2026-05-07T21:15:52.183468Z"
 
 [tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default]
 display_name = "Image+Audio to Video"
@@ -453,20 +489,6 @@ field_key = "value"
 api_node_id = "340:319"
 api_field_key = "value"
 default = "Medium shot. Beautiful scene.\n\n"
-
-[[tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default.inputs]]
-name = "duration"
-type = "integer"
-node_id = "340"
-required = true
-display_name = "Duration"
-widget_idx = 5
-field_key = "value_4"
-api_node_id = "340:331"
-api_field_key = "value"
-default = 10
-min = 1
-max = 30
 
 [[tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default.inputs]]
 name = "width"
@@ -495,6 +517,34 @@ api_field_key = "value"
 default = 768
 min = 512
 max = 2048
+
+[[tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default.inputs]]
+name = "duration"
+type = "integer"
+node_id = "340"
+required = true
+display_name = "Duration"
+widget_idx = 5
+field_key = "value_4"
+api_node_id = "340:331"
+api_field_key = "value"
+default = 10
+min = 1
+max = 30
+
+[[tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default.inputs]]
+name = "fps"
+type = "integer"
+node_id = "340"
+required = true
+display_name = "FPS"
+widget_idx = 3
+field_key = "value_3"
+api_node_id = "340:323"
+api_field_key = "value"
+default = 24
+min = 12
+max = 100
 
 [[tool.comfygit.workflows.video_ltx2_3_ia2v.execution_contract.contracts.default.inputs]]
 name = "seed"
@@ -763,6 +813,74 @@ node_id = "3"
 display_name = "Save Audio (FLAC)"
 selector = "primary"
 
+[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame"]
+path = "workflows/LTX-2.3_-_FLF2V_First-Last-Frame.json"
+nodes = ["ComfyUI-GGUF", "comfyui-easy-use", "comfyui-kjnodes", "comfyui-videohelpersuite", "rgthree-comfy"]
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "ltx-2-spatial-upscaler-x2-1.0.safetensors"
+category = "unknown"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "182", node_type = "LatentUpscaleModelLoader", widget_idx = 0, widget_value = "ltx-2-spatial-upscaler-x2-1.0.safetensors"}]
+hash = "d8d82a1285fe5e0c"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "LTX23_video_vae_bf16.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "181", node_type = "VAELoader", widget_idx = 0, widget_value = "LTX23_video_vae_bf16.safetensors"}]
+hash = "cc3909e021663fda"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "taeltx2_3.safetensors"
+category = "vae"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "180", node_type = "VAELoader", widget_idx = 0, widget_value = "taeltx2_3.safetensors"}]
+hash = "967436c7e2549a2c"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "187", node_type = "UNETLoader", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors"}]
+hash = "e724311b536c7e98"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "gemma_3_12B_it_fp8_scaled.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "190", node_type = "DualCLIPLoader", widget_idx = 0, widget_value = "gemma_3_12B_it_fp8_scaled.safetensors"}]
+hash = "87e004cd467b282b"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "ltx-2.3_text_projection_bf16.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "190", node_type = "DualCLIPLoader", widget_idx = 1, widget_value = "ltx-2.3_text_projection_bf16.safetensors"}]
+hash = "29c24f6f462a0f0d"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "ltx-2-19b-distilled-lora-384.safetensors"
+category = "loras"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "186", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2-19b-distilled-lora-384.safetensors"}]
+hash = "47174a8845b2c446"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
+filename = "ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors"
+category = "loras"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "186", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors"}]
+hash = "a28f34f375708aae"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://civitai.com/api/download/models/2442540?type=Model&format=SafeTensor&size=full&fp=fp16"]}
@@ -778,6 +896,14 @@ a1ae1ecf3fb8e280 = {filename = "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.
 c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", size = 995743560, relative_path = "latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors", category = "unknown", sources = ["https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors?download=true"]}
 1e2adef062b6e90f = {filename = "ltx-2.3-id-lora-talkvid-3k.safetensors", size = 1157884304, relative_path = "loras/ltx-2.3-id-lora-talkvid-3k.safetensors", category = "loras", sources = ["https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx-2.3-id-lora-talkvid-3k.safetensors"]}
 02f44099be1afd16 = {filename = "ltx-2.3-22b-distilled-lora-384.safetensors", size = 7605507256, relative_path = "loras/ltx-2.3-22b-distilled-lora-384.safetensors", category = "loras", sources = ["https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled-lora-384.safetensors"]}
+d8d82a1285fe5e0c = {filename = "ltx-2-spatial-upscaler-x2-1.0.safetensors", size = 995765578, relative_path = "latent_upscale_models/ltx-2-spatial-upscaler-x2-1.0.safetensors", category = "unknown", sources = ["https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-spatial-upscaler-x2-1.0.safetensors"]}
+cc3909e021663fda = {filename = "LTX23_video_vae_bf16.safetensors", size = 1452258578, relative_path = "vae/LTX23_video_vae_bf16.safetensors", category = "vae", sources = ["https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors"]}
+967436c7e2549a2c = {filename = "taeltx2_3.safetensors", size = 23531296, relative_path = "vae/taeltx2_3.safetensors", category = "vae", sources = ["https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors"]}
+e724311b536c7e98 = {filename = "ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors", size = 25226571988, relative_path = "diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors"]}
+87e004cd467b282b = {filename = "gemma_3_12B_it_fp8_scaled.safetensors", size = 13205434827, relative_path = "text_encoders/gemma_3_12B_it_fp8_scaled.safetensors", category = "text_encoders"}
+29c24f6f462a0f0d = {filename = "ltx-2.3_text_projection_bf16.safetensors", size = 2312149072, relative_path = "text_encoders/ltx-2.3_text_projection_bf16.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/text_encoders/ltx-2.3_text_projection_bf16.safetensors"]}
+47174a8845b2c446 = {filename = "ltx-2-19b-distilled-lora-384.safetensors", size = 7674558424, relative_path = "loras/ltx-2-19b-distilled-lora-384.safetensors", category = "loras", sources = ["https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors"]}
+a28f34f375708aae = {filename = "ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors", size = 2741024390, relative_path = "loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors", category = "loras", sources = ["https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
@@ -840,3 +966,25 @@ comfyui-fl-voxcpm-6c19a74b = [
     "transformers>=4.36.2",
     "wetext",
 ]
+comfyui-videohelpersuite-879d1780 = [
+    "imageio-ffmpeg",
+    "opencv-contrib-python-headless",
+]
+comfyui-gguf-1729cc7a = [
+    "gguf>=0.13.0",
+    "protobuf",
+    "sentencepiece",
+]
+comfyui-easy-use-f1a954dd = [
+    "accelerate",
+    "clip-interrogator>=0.6.0",
+    "diffusers",
+    "lark",
+    "matplotlib",
+    "onnxruntime",
+    "opencv-contrib-python-headless",
+    "peft",
+    "sentencepiece",
+    "spandrel",
+]
+rgthree-comfy-c0668886 = []
