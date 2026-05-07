@@ -83,6 +83,15 @@ download_url = "https://cdn.comfy.org/akatz/comfyui-basic-math/0.0.6/node.zip"
 source = "registry"
 criticality = "required"
 
+[tool.comfygit.nodes.ComfyUI-FL-VoxCPM]
+name = "ComfyUI-FL-VoxCPM"
+registry_id = "ComfyUI-FL-VoxCPM"
+repository = "https://github.com/filliptm/ComfyUI-FL-VoxCPM"
+version = "2.2.2"
+download_url = "https://cdn.comfy.org/machinedelusions/ComfyUI-FL-VoxCPM/2.2.2/node.zip"
+source = "registry"
+criticality = "required"
+
 [tool.comfygit.workflows.z-image]
 path = "workflows/z-image.json"
 nodes = ["comfyui-kjnodes"]
@@ -751,6 +760,80 @@ status = "resolved"
 nodes = [{node_id = "2454ad83-157c-40dd-9f19-5daaf4041ce0:317", node_type = "LTXAVTextEncoderLoader", widget_idx = 0, widget_value = "gemma_3_12B_it_fp4_mixed.safetensors"}]
 hash = "59cfa9ca80733ff9"
 
+[tool.comfygit.workflows."VoxCPM V2 TTS"]
+path = "workflows/VoxCPM V2 TTS.json"
+nodes = ["ComfyUI-FL-VoxCPM"]
+models = []
+
+[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/VoxCPM V2 TTS.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-05-07T20:42:53.363737Z"
+
+[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default]
+display_name = "Voice Cloning V2"
+description = "Voice cloning with control (mood) using the VoxCPM V2 model"
+
+[[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default.inputs]]
+name = "audio"
+type = "audio"
+node_id = "2"
+required = true
+display_name = "Audio"
+widget_idx = 0
+field_key = "audio"
+api_node_id = "2"
+api_field_key = "audio"
+default = ""
+
+[[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "4"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+field_key = "value"
+api_node_id = "4"
+api_field_key = "value"
+default = "Hello, this is a test of the VoxCPM V2 Text to speech model."
+
+[[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default.inputs]]
+name = "control"
+type = "string"
+node_id = "5"
+required = true
+display_name = "Mood"
+widget_idx = 0
+field_key = "value"
+api_node_id = "5"
+api_field_key = "value"
+default = "Relaxed"
+
+[[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "integer"
+node_id = "6"
+required = true
+display_name = "Seed"
+widget_idx = 0
+field_key = "value"
+api_node_id = "6"
+api_field_key = "value"
+default = 0
+min = 0
+max = 99999999
+
+[[tool.comfygit.workflows."VoxCPM V2 TTS".execution_contract.contracts.default.outputs]]
+name = "save_audio_flac"
+type = "audio"
+node_id = "3"
+display_name = "Save Audio (FLAC)"
+selector = "primary"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://civitai.com/api/download/models/2442540?type=Model&format=SafeTensor&size=full&fp=fp16"]}
@@ -770,7 +853,7 @@ c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", si
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
 override-dependencies = ["uv>=0.10.0"]
-constraint-dependencies = ["av<16.2", "transformers>=4.51.3,<5"]
+constraint-dependencies = ["av<16.2", "transformers>=4.51.3,<5", "fsspec<2026.3"]
 [dependency-groups]
 comfygit-manager-b8a6c4eb = [
     "comfygit-core==0.3.22",
@@ -807,3 +890,24 @@ vibevoice-comfyui-6d77ee81 = [
     "transformers>=4.51.3",
 ]
 comfyui-basic-math-66850bf1 = []
+comfyui-fl-voxcpm-6c19a74b = [
+    "addict",
+    "argbind",
+    "bitsandbytes",
+    "datasets",
+    "diffusers",
+    "einops",
+    "huggingface-hub",
+    "inflect",
+    "pydantic",
+    "safetensors",
+    "simplejson",
+    "sortedcontainers",
+    "soundfile",
+    "torch>=2.5.0",
+    "torchaudio>=2.5.0",
+    "torchcodec",
+    "tqdm",
+    "transformers>=4.36.2",
+    "wetext",
+]
