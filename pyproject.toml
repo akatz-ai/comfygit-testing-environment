@@ -65,15 +65,6 @@ criticality = "required"
 branch = "dev"
 pinned_commit = "49e0f6420cc80e550aebe8a5c695ccf0661543d3"
 
-[tool.comfygit.nodes.VibeVoice-ComfyUI]
-name = "VibeVoice ComfyUI"
-registry_id = "VibeVoice-ComfyUI"
-repository = "https://github.com/Enemyx-net/VibeVoice-ComfyUI"
-version = "1.8.1"
-download_url = "https://cdn.comfy.org/enemyx/VibeVoice-ComfyUI/1.8.1/node.zip"
-source = "registry"
-criticality = "required"
-
 [tool.comfygit.nodes.comfyui-basic-math]
 name = "ComfyUI-Basic-Math"
 registry_id = "comfyui-basic-math"
@@ -425,11 +416,6 @@ criticality = "flexible"
 status = "resolved"
 nodes = [{node_id = "98ee9e5b-467b-40aa-a534-36033f27d0b4:293", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-lora-384.safetensors"}]
 hash = "02f44099be1afd16"
-
-[tool.comfygit.workflows.Single-Speaker]
-path = "workflows/Single-Speaker.json"
-nodes = ["VibeVoice-ComfyUI"]
-models = []
 
 [tool.comfygit.workflows.video_ltx2_3_ia2v]
 path = "workflows/video_ltx2_3_ia2v.json"
@@ -1062,26 +1048,6 @@ comfyui-kjnodes-f4971021 = [
     "mss",
     "opencv-contrib-python-headless",
     "pillow>=10.3.0",
-]
-vibevoice-comfyui-6d77ee81 = [
-    "absl-py",
-    "accelerate>=1.6.0",
-    "aiortc",
-    "av>=14.3.0",
-    "bitsandbytes>=0.48.1",
-    "diffusers",
-    "huggingface-hub>=0.25.1",
-    "librosa>=0.9.0",
-    "ml-collections",
-    "numpy>=1.20.0",
-    "peft>=0.17.0",
-    "protobuf",
-    "scipy",
-    "soundfile>=0.12.0",
-    "torch>=2.0.0",
-    "torchaudio>=2.0.0",
-    "tqdm",
-    "transformers>=4.51.3",
 ]
 comfyui-basic-math-66850bf1 = []
 comfyui-fl-voxcpm-6c19a74b = [
