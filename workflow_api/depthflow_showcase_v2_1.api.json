@@ -1,0 +1,296 @@
+{
+  "5": {
+    "inputs": {
+      "frame_rate": [
+        "245",
+        0
+      ],
+      "loop_count": 1,
+      "filename_prefix": "Depthflow/output",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 11,
+      "save_metadata": true,
+      "trim_to_audio": false,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "91",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine \ud83c\udfa5\ud83c\udd65\ud83c\udd57\ud83c\udd62"
+    }
+  },
+  "50": {
+    "inputs": {
+      "image": "3b26f2a2-1762-4f7d-8d4f-5e3821e0bf55.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "85": {
+    "inputs": {
+      "da_model": [
+        "86",
+        0
+      ],
+      "images": [
+        "246",
+        0
+      ]
+    },
+    "class_type": "DepthAnything_V2",
+    "_meta": {
+      "title": "Depth Anything V2"
+    }
+  },
+  "86": {
+    "inputs": {
+      "model": "depth_anything_v2_vitl_fp32.safetensors",
+      "precision": "auto"
+    },
+    "class_type": "DownloadAndLoadDepthAnythingV2Model",
+    "_meta": {
+      "title": "DownloadAndLoadDepthAnythingV2Model"
+    }
+  },
+  "88": {
+    "inputs": {
+      "images": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "91": {
+    "inputs": {
+      "animation_speed": 1,
+      "input_fps": [
+        "202",
+        0
+      ],
+      "output_fps": [
+        "245",
+        0
+      ],
+      "num_frames": [
+        "248",
+        0
+      ],
+      "quality": 100,
+      "ssaa": 4,
+      "invert": 0,
+      "tiling_mode": "mirror",
+      "edge_fix": 5,
+      "image": [
+        "246",
+        0
+      ],
+      "depth_map": [
+        "85",
+        0
+      ],
+      "motion": [
+        "119",
+        0
+      ]
+    },
+    "class_type": "Depthflow",
+    "_meta": {
+      "title": "\ud83c\udf0a Depthflow"
+    }
+  },
+  "119": {
+    "inputs": {
+      "any_01": [
+        "124",
+        0
+      ],
+      "any_05": [
+        "137",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "124": {
+    "inputs": {
+      "strength": 1,
+      "feature_threshold": 0,
+      "feature_param": "intensity",
+      "feature_mode": "relative",
+      "intensity": 2.0000000000000004,
+      "reverse": false,
+      "depth": 0.27
+    },
+    "class_type": "DepthflowMotionPresetOrbital",
+    "_meta": {
+      "title": "\ud83c\udf0a Depthflow Motion Preset Orbital"
+    }
+  },
+  "137": {
+    "inputs": {
+      "any_05": [
+        "146",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "146": {
+    "inputs": {
+      "any_05": [
+        "147",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "147": {
+    "inputs": {},
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "198": {
+    "inputs": {
+      "any_01": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "201": {
+    "inputs": {
+      "any_01": [
+        "224",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "202": {
+    "inputs": {
+      "any_01": [
+        "235",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "222": {
+    "inputs": {
+      "value": 2.5000000000000004
+    },
+    "class_type": "FloatInput",
+    "_meta": {
+      "title": "Length of Video (seconds)"
+    }
+  },
+  "223": {
+    "inputs": {
+      "value": 30
+    },
+    "class_type": "IntegerInput",
+    "_meta": {
+      "title": "Output FPS"
+    }
+  },
+  "224": {
+    "inputs": {
+      "operation": "*",
+      "a": [
+        "222",
+        0
+      ],
+      "b": [
+        "223",
+        0
+      ]
+    },
+    "class_type": "BasicMath",
+    "_meta": {
+      "title": "Multiply FPS w/ Length"
+    }
+  },
+  "235": {
+    "inputs": {
+      "value": 100.00000000000003
+    },
+    "class_type": "FloatInput",
+    "_meta": {
+      "title": "Image Input FPS"
+    }
+  },
+  "245": {
+    "inputs": {
+      "any": [
+        "223",
+        0
+      ]
+    },
+    "class_type": "ToFloat",
+    "_meta": {
+      "title": "To Float | Basic"
+    }
+  },
+  "246": {
+    "inputs": {
+      "measurement": "pixels",
+      "width": 1024,
+      "height": 1024,
+      "fit": "contain",
+      "method": "nearest-exact",
+      "image": [
+        "198",
+        0
+      ]
+    },
+    "class_type": "Image Resize (rgthree)",
+    "_meta": {
+      "title": "Image Resize (rgthree)"
+    }
+  },
+  "248": {
+    "inputs": {
+      "round_method": "floor",
+      "any": [
+        "201",
+        0
+      ]
+    },
+    "class_type": "ToInt",
+    "_meta": {
+      "title": "To Int | Basic"
+    }
+  }
+}
