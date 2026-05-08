@@ -129,16 +129,6 @@ status = "resolved"
 nodes = [{node_id = "4", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "v1-5-pruned-emaonly-fp16.safetensors"}]
 hash = "1fd237d4d78fa19f"
 
-[tool.comfygit.workflows.LLM_Utils_v1]
-path = "workflows/LLM_Utils_v1.json"
-nodes = ["comfyui-akatz-nodes", "rgthree-comfy"]
-models = []
-
-[tool.comfygit.workflows.LLM_Utils_v1.custom_node_map]
-"Note Plus (mtb)" = false
-Searge_LLM_Node = false
-JWStringMultiline = false
-
 [tool.comfygit.workflows.depthflow_showcase_v2_1]
 path = "workflows/depthflow_showcase_v2_1.json"
 nodes = ["comfyui-basic-math", "comfyui-depthanythingv2", "comfyui-depthflow-nodes", "comfyui-videohelpersuite", "rgthree-comfy"]
@@ -149,7 +139,8 @@ models = []
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
-constraint-dependencies = ["attrs<25.4", "click<8.2", "glfw<2.10", "huggingface-hub<0.37", "pillow<11.4", "pydantic<2.12", "pydantic-core<2.34", "requests<2.33", "rich<13.10", "scipy<1.16", "tokenizers<0.22", "tomlkit<0.14", "transformers<4.54", "typer<0.16", "uv<0.8", "xxhash<3.6"]
+constraint-dependencies = ["attrs<25.4", "click<8.2", "glfw<2.10", "huggingface-hub<0.37", "pillow<11.4", "pydantic<2.12", "pydantic-core<2.34", "requests<2.33", "rich<13.10", "scipy<1.16", "tokenizers<0.22", "tomlkit<0.14", "transformers<4.54", "typer<0.16", "xxhash<3.6"]
+override-dependencies = ["uv>=0.10.0"]
 [dependency-groups]
 comfygit-manager-b2d41ad7 = [
     "comfygit-core==0.3.22",
@@ -157,7 +148,7 @@ comfygit-manager-b2d41ad7 = [
     "xxhash>=3.5.0",
     "zeroconf>=0.131.0",
 ]
-comfygit-system = ["uv>=0.7"]
+comfygit-system = ["uv>=0.10.0"]
 comfyui-akatz-nodes-7fa97fd9 = [
     "numpy",
     "opencv-contrib-python-headless",
