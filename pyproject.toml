@@ -815,7 +815,7 @@ selector = "primary"
 
 [tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame"]
 path = "workflows/LTX-2.3_-_FLF2V_First-Last-Frame.json"
-nodes = ["ComfyUI-GGUF", "comfyui-easy-use", "comfyui-kjnodes", "comfyui-videohelpersuite", "rgthree-comfy"]
+nodes = ["ComfyUI-GGUF", "comfyui-basic-math", "comfyui-easy-use", "comfyui-kjnodes", "comfyui-videohelpersuite", "rgthree-comfy"]
 
 [[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".models]]
 filename = "ltx-2-spatial-upscaler-x2-1.0.safetensors"
@@ -880,6 +880,145 @@ criticality = "flexible"
 status = "resolved"
 nodes = [{node_id = "186", node_type = "LoraLoaderModelOnly", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors"}]
 hash = "a28f34f375708aae"
+
+[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/LTX-2.3_-_FLF2V_First-Last-Frame.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-05-07T23:02:41.769390Z"
+
+[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default]
+display_name = "First Frame Last Frame Video"
+description = "Take 2 images with first frame and last frame and the model will interpolate a video between them"
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "image1"
+type = "image"
+node_id = "45"
+required = true
+display_name = "First Frame"
+widget_idx = 0
+field_key = "image"
+api_node_id = "45"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "image2"
+type = "image"
+node_id = "47"
+required = true
+display_name = "Last Frame"
+widget_idx = 0
+field_key = "image"
+api_node_id = "47"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "2103"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2103"
+api_field_key = "value"
+default = "Make this image come alive with cinematic motion, smooth animation. \n\nA girl and her friend llama look at each other in anger, the girl bares her fists and the llama snarls at her. They end up in a boxing match to see who can fight the best.\n\nMedium shot where the camera slowly pulls out and the characters stay relatively centered while the background morphs into a boxing arena. Single continuous camera shot."
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "width"
+type = "integer"
+node_id = "2080"
+required = true
+display_name = "Width"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2080"
+api_field_key = "value"
+default = 1280
+min = 128
+max = 2048
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "height"
+type = "integer"
+node_id = "2079"
+required = true
+display_name = "Height"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2079"
+api_field_key = "value"
+default = 720
+min = 128
+max = 2048
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "duration"
+type = "integer"
+node_id = "2078"
+required = true
+display_name = "Duration"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2078"
+api_field_key = "value"
+default = 10
+min = 1
+max = 30
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "fps"
+type = "integer"
+node_id = "2170"
+required = true
+display_name = "FPS"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2170"
+api_field_key = "value"
+default = 24
+min = 12
+max = 100
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "seed"
+type = "integer"
+node_id = "2171"
+required = true
+display_name = "Seed"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2171"
+api_field_key = "value"
+default = "0"
+min = 0
+max = 9999999
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.inputs]]
+name = "last_frame_strength"
+type = "number"
+node_id = "2108"
+required = true
+display_name = "Last Frame Strength"
+widget_idx = 0
+field_key = "value"
+api_node_id = "2108"
+api_field_key = "value"
+default = 1
+min = 0
+max = 2
+
+[[tool.comfygit.workflows."LTX-2.3_-_FLF2V_First-Last-Frame".execution_contract.contracts.default.outputs]]
+name = "video_combine"
+type = "video"
+node_id = "43"
+display_name = "Video Combine 🎥🅥🅗🅢"
+selector = "primary"
 
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}

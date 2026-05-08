@@ -1,8 +1,8 @@
 {
   "id": "cb95e097-a93f-4ea2-9e00-0c9c6627db84",
   "revision": 0,
-  "last_node_id": 2167,
-  "last_link_id": 3864,
+  "last_node_id": 2173,
+  "last_link_id": 3870,
   "links": [
     [
       1,
@@ -955,6 +955,54 @@
       34,
       0,
       "LATENT"
+    ],
+    [
+      3865,
+      2170,
+      0,
+      2168,
+      0,
+      "INT"
+    ],
+    [
+      3866,
+      2168,
+      0,
+      2076,
+      0,
+      "FLOAT"
+    ],
+    [
+      3867,
+      2171,
+      0,
+      2172,
+      0,
+      "INT"
+    ],
+    [
+      3868,
+      2173,
+      0,
+      2172,
+      1,
+      "INT"
+    ],
+    [
+      3869,
+      2171,
+      0,
+      15,
+      0,
+      "INT"
+    ],
+    [
+      3870,
+      2172,
+      0,
+      14,
+      0,
+      "INT"
     ]
   ],
   "groups": [
@@ -1163,8 +1211,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 58,
-          "lastNodeId": 2167,
-          "lastLinkId": 3864,
+          "lastNodeId": 2173,
+          "lastLinkId": 3870,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1432,7 +1480,7 @@
             "id": 486,
             "type": "easy showAnything",
             "widgets_values": [
-              "Style: cinematic\n\nA young woman and a llama stand facing each other, expressions of anger etched on their faces. The woman clenches her fists, and the llama snarls, its ears flattened against its head. The scene seamlessly transitions into a boxing arena, the background morphing into a vibrant boxing ring with cheering crowds and flashing lights. The camera slowly pulls back, maintaining a medium shot of the two combatants as they begin a boxing match, the sounds of the crowd and the ring bell echoing through the arena."
+              "Style: cinematic - A young woman and her llama friend are hiking along a mountain trail, their boots crunching on the gravel path as they ascend. The camera slowly pulls back, revealing a panoramic view of the snow-capped peaks and lush green valleys. The llama grazes on wildflowers, occasionally looking up at the woman with a gentle expression. The scene transitions seamlessly to a sun-drenched beach, the woman and llama now strolling along the sandy shore, the sound of crashing waves and seagulls fills the air."
             ],
             "inputs": [
               {
@@ -1776,8 +1824,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 58,
-          "lastNodeId": 2167,
-          "lastLinkId": 3864,
+          "lastNodeId": 2173,
+          "lastLinkId": 3870,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2465,7 +2513,7 @@
         273.7224392361113,
         108.0
       ],
-      "order": 75,
+      "order": 78,
       "mode": 0
     },
     {
@@ -2730,7 +2778,7 @@
         210.0,
         34.0
       ],
-      "order": 80,
+      "order": 83,
       "mode": 0,
       "title": "Set_upscale_model"
     },
@@ -2771,7 +2819,7 @@
         210.0,
         34.0
       ],
-      "order": 92,
+      "order": 91,
       "mode": 0,
       "title": "Set_vae_audio",
       "color": "#af3535",
@@ -2814,7 +2862,7 @@
         210.0,
         34.0
       ],
-      "order": 91,
+      "order": 90,
       "mode": 0,
       "title": "Set_vae",
       "color": "#af3535",
@@ -2883,7 +2931,7 @@
         210.0,
         34.0
       ],
-      "order": 93,
+      "order": 92,
       "mode": 0,
       "title": "Set_vae_tiny"
     },
@@ -2950,7 +2998,7 @@
         210.0,
         34.0
       ],
-      "order": 96,
+      "order": 94,
       "mode": 0,
       "title": "Set_clip",
       "color": "#c09430",
@@ -3251,7 +3299,7 @@
         210.0,
         60.0
       ],
-      "order": 124,
+      "order": 129,
       "mode": 0,
       "title": "Set_negative",
       "color": "#38291f",
@@ -3294,7 +3342,7 @@
         210.0,
         60.0
       ],
-      "order": 123,
+      "order": 128,
       "mode": 0,
       "title": "Set_positive",
       "color": "#38291f",
@@ -3445,7 +3493,7 @@
         308.9009765625,
         60.0
       ],
-      "order": 142,
+      "order": 147,
       "mode": 0,
       "title": "Set_final_video"
     },
@@ -3486,7 +3534,7 @@
         308.9009765625,
         60.0
       ],
-      "order": 141,
+      "order": 146,
       "mode": 0,
       "title": "Set_final_audio"
     },
@@ -3804,7 +3852,7 @@
         210.0,
         34.0
       ],
-      "order": 130,
+      "order": 135,
       "mode": 0,
       "title": "Set_model_with_lora"
     },
@@ -3881,7 +3929,7 @@
         210.0,
         60.0
       ],
-      "order": 131,
+      "order": 136,
       "mode": 0,
       "title": "Set_model"
     },
@@ -3922,7 +3970,7 @@
         210.0,
         34.0
       ],
-      "order": 88,
+      "order": 95,
       "mode": 0,
       "title": "Set_height"
     },
@@ -3963,7 +4011,7 @@
         210.0,
         34.0
       ],
-      "order": 87,
+      "order": 96,
       "mode": 0,
       "title": "Set_width"
     },
@@ -4004,7 +4052,7 @@
         210.0,
         34.0
       ],
-      "order": 81,
+      "order": 114,
       "mode": 0,
       "title": "Set_fps"
     },
@@ -4018,6 +4066,7 @@
         {
           "name": "value",
           "type": "FLOAT",
+          "link": 3866,
           "localized_name": "value",
           "widget": {
             "name": "value"
@@ -4051,7 +4100,7 @@
         210.0,
         61.42105412153796
       ],
-      "order": 25,
+      "order": 105,
       "mode": 0,
       "title": "FPS",
       "color": "#006691",
@@ -4094,7 +4143,7 @@
         210.0,
         34.0
       ],
-      "order": 82,
+      "order": 84,
       "mode": 0,
       "title": "Set_enhance_prompt"
     },
@@ -4140,7 +4189,7 @@
         301.73597873412746,
         60.7596503247064
       ],
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "title": "ENABLE PROMPT ENHANCER",
       "color": "#008181",
@@ -4183,7 +4232,7 @@
         210.0,
         536.6684576797243
       ],
-      "order": 113,
+      "order": 117,
       "mode": 0,
       "title": "Set_firstframe"
     },
@@ -4245,7 +4294,7 @@
         210.0,
         58.0
       ],
-      "order": 89,
+      "order": 88,
       "mode": 0
     },
     {
@@ -4332,7 +4381,7 @@
         273.7224392361113,
         138.50420935204346
       ],
-      "order": 78,
+      "order": 81,
       "mode": 0
     },
     {
@@ -4386,7 +4435,7 @@
         275.179296875,
         58.0
       ],
-      "order": 111,
+      "order": 113,
       "mode": 4
     },
     {
@@ -4450,7 +4499,7 @@
         272.35703125,
         82.0
       ],
-      "order": 119,
+      "order": 123,
       "mode": 4
     },
     {
@@ -4554,7 +4603,7 @@
         283.875,
         178.0
       ],
-      "order": 126,
+      "order": 131,
       "mode": 4
     },
     {
@@ -4616,7 +4665,7 @@
         330.693304948908,
         94.21602407956198
       ],
-      "order": 108,
+      "order": 110,
       "mode": 0,
       "color": "#346434",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -4653,7 +4702,7 @@
         210.0,
         58.0
       ],
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "title": "Get_firstframe"
     },
@@ -4715,7 +4764,7 @@
         243.6109375,
         59.37982516235343
       ],
-      "order": 105,
+      "order": 107,
       "mode": 0
     },
     {
@@ -4755,7 +4804,7 @@
         271.305509971064,
         60.0
       ],
-      "order": 109,
+      "order": 111,
       "mode": 0,
       "title": "Set_model_nag"
     },
@@ -4792,7 +4841,7 @@
         271.305509971064,
         50.0
       ],
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "title": "Get_negative"
     },
@@ -4894,7 +4943,7 @@
         271.305509971064,
         170.0
       ],
-      "order": 100,
+      "order": 102,
       "mode": 0
     },
     {
@@ -4929,7 +4978,7 @@
         271.305509971064,
         60.0
       ],
-      "order": 29,
+      "order": 28,
       "mode": 0,
       "title": "Get_negative"
     },
@@ -5030,7 +5079,7 @@
         271.305509971064,
         170.0
       ],
-      "order": 117,
+      "order": 121,
       "mode": 0,
       "title": "LTXVScheduler (for more steps)"
     },
@@ -5066,7 +5115,7 @@
         210.0,
         34.0
       ],
-      "order": 31,
+      "order": 29,
       "mode": 0,
       "title": "Get_enhance_prompt"
     },
@@ -5102,7 +5151,7 @@
         271.305509971064,
         60.0
       ],
-      "order": 32,
+      "order": 30,
       "mode": 0,
       "title": "Get_model_nag"
     },
@@ -5138,7 +5187,7 @@
         271.305509971064,
         58.0
       ],
-      "order": 33,
+      "order": 31,
       "mode": 0,
       "title": "Get_positive"
     },
@@ -5212,7 +5261,7 @@
         271.305509971064,
         106.66666666666667
       ],
-      "order": 84,
+      "order": 86,
       "mode": 0
     },
     {
@@ -5247,7 +5296,7 @@
         271.305509971064,
         60.0
       ],
-      "order": 34,
+      "order": 32,
       "mode": 0,
       "title": "Get_model",
       "color": "#1f1f48",
@@ -5295,7 +5344,7 @@
         274.0120536645418,
         58.0
       ],
-      "order": 35,
+      "order": 33,
       "mode": 0
     },
     {
@@ -5340,7 +5389,7 @@
         271.305509971064,
         58.0
       ],
-      "order": 36,
+      "order": 34,
       "mode": 0
     },
     {
@@ -5375,7 +5424,7 @@
         210.0,
         536.6684576797243
       ],
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "title": "Get_width",
       "color": "#1b4669",
@@ -5413,7 +5462,7 @@
         210.0,
         536.6684576797243
       ],
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "title": "Get_height",
       "color": "#1b4669",
@@ -5451,7 +5500,7 @@
         271.305509971064,
         34.0
       ],
-      "order": 39,
+      "order": 37,
       "mode": 0,
       "title": "Get_vae_tiny"
     },
@@ -5521,7 +5570,7 @@
         271.305509971064,
         98.86928985228224
       ],
-      "order": 85,
+      "order": 87,
       "mode": 0
     },
     {
@@ -5582,7 +5631,7 @@
         243.6109375,
         59.37982516235343
       ],
-      "order": 114,
+      "order": 118,
       "mode": 0
     },
     {
@@ -5622,7 +5671,7 @@
         210.0,
         536.6684576797243
       ],
-      "order": 122,
+      "order": 127,
       "mode": 0,
       "title": "Set_lastframe"
     },
@@ -5688,7 +5737,7 @@
         281.3085035775538,
         136.0
       ],
-      "order": 112,
+      "order": 116,
       "mode": 0
     },
     {
@@ -5728,7 +5777,7 @@
         210.0,
         58.0
       ],
-      "order": 121,
+      "order": 126,
       "mode": 0,
       "title": "Set_height_downscaled"
     },
@@ -5769,7 +5818,7 @@
         210.0,
         60.0
       ],
-      "order": 120,
+      "order": 125,
       "mode": 0,
       "title": "Set_width_downscaled"
     },
@@ -5841,7 +5890,7 @@
         243.6109375,
         82.0
       ],
-      "order": 104,
+      "order": 106,
       "mode": 0
     },
     {
@@ -5897,7 +5946,7 @@
         273.7224392361113,
         63.445090410071316
       ],
-      "order": 110,
+      "order": 112,
       "mode": 0
     },
     {
@@ -5973,7 +6022,7 @@
         273.7224392361113,
         86.66666666666667
       ],
-      "order": 116,
+      "order": 120,
       "mode": 0
     },
     {
@@ -6034,7 +6083,7 @@
         387.0142215022124,
         88.0
       ],
-      "order": 79,
+      "order": 82,
       "mode": 0,
       "color": "#422342",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -6094,7 +6143,7 @@
         387.0142215022124,
         118.0
       ],
-      "order": 128,
+      "order": 133,
       "mode": 0
     },
     {
@@ -6134,7 +6183,7 @@
         210.0,
         60.0
       ],
-      "order": 90,
+      "order": 89,
       "mode": 0,
       "title": "Set_firstframe_strength"
     },
@@ -6175,7 +6224,7 @@
         210.0,
         58.0
       ],
-      "order": 94,
+      "order": 98,
       "mode": 0,
       "title": "Set_lastframe_strength"
     },
@@ -6199,7 +6248,7 @@
         305.44734039874265,
         137.56662239483467
       ],
-      "order": 40,
+      "order": 38,
       "mode": 0,
       "title": "About Last Frame Stength",
       "color": "#222",
@@ -6267,7 +6316,7 @@
         346.517577185067,
         107.25438651123113
       ],
-      "order": 41,
+      "order": 39,
       "mode": 4,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -6314,7 +6363,7 @@
         355.55555555555475,
         60.44444444444434
       ],
-      "order": 42,
+      "order": 40,
       "mode": 4,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -6339,7 +6388,7 @@
         382.280702747692,
         102.45137621179947
       ],
-      "order": 43,
+      "order": 41,
       "mode": 0,
       "title": "Video settings",
       "color": "#222",
@@ -6417,7 +6466,7 @@
         274.0120536645418,
         98.0
       ],
-      "order": 77,
+      "order": 80,
       "mode": 0
     },
     {
@@ -6457,7 +6506,7 @@
         210.0,
         34.0
       ],
-      "order": 101,
+      "order": 124,
       "mode": 0,
       "title": "Set_frames"
     },
@@ -6546,58 +6595,8 @@
         231.2792932772577,
         148.0
       ],
-      "order": 86,
+      "order": 115,
       "mode": 0
-    },
-    {
-      "id": 2078,
-      "type": "INTConstant",
-      "widgets_values": [
-        10
-      ],
-      "inputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "localized_name": "value",
-          "widget": {
-            "name": "value"
-          },
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            3689
-          ],
-          "localized_name": "value",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "INTConstant",
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "pos": [
-        640.9191383711541,
-        4559.4639865831205
-      ],
-      "size": [
-        210.0,
-        58.0
-      ],
-      "order": 44,
-      "mode": 0,
-      "title": "LENGTH (in seconds)",
-      "color": "#006691",
-      "bgcolor": "rgba(24,24,27,.9)"
     },
     {
       "id": 44,
@@ -6755,7 +6754,7 @@
         283.2403948430517,
         397.1527555873845
       ],
-      "order": 97,
+      "order": 99,
       "mode": 0
     },
     {
@@ -6795,7 +6794,7 @@
         210.0,
         60.0
       ],
-      "order": 115,
+      "order": 119,
       "mode": 0,
       "title": "Set_lastframe_resized"
     },
@@ -6951,7 +6950,7 @@
         289.17015586560296,
         398.0271852895112
       ],
-      "order": 106,
+      "order": 108,
       "mode": 0
     },
     {
@@ -7012,108 +7011,8 @@
         210.0,
         58.0
       ],
-      "order": 83,
+      "order": 85,
       "mode": 0
-    },
-    {
-      "id": 2080,
-      "type": "INTConstant",
-      "widgets_values": [
-        1280
-      ],
-      "inputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "localized_name": "value",
-          "widget": {
-            "name": "value"
-          },
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            3686
-          ],
-          "localized_name": "value",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "INTConstant",
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "pos": [
-        166.31199322565232,
-        4561.340558312514
-      ],
-      "size": [
-        210.0,
-        58.0
-      ],
-      "order": 45,
-      "mode": 0,
-      "title": "WIDTH",
-      "color": "#006691",
-      "bgcolor": "rgba(24,24,27,.9)"
-    },
-    {
-      "id": 2079,
-      "type": "INTConstant",
-      "widgets_values": [
-        720
-      ],
-      "inputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "localized_name": "value",
-          "widget": {
-            "name": "value"
-          },
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            3685
-          ],
-          "localized_name": "value",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "INTConstant",
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "pos": [
-        402.534400299723,
-        4562.70776769717
-      ],
-      "size": [
-        210.0,
-        58.0
-      ],
-      "order": 46,
-      "mode": 0,
-      "title": "HEIGHT",
-      "color": "#006691",
-      "bgcolor": "rgba(24,24,27,.9)"
     },
     {
       "id": 148,
@@ -7147,7 +7046,7 @@
         308.9009765625,
         34.0
       ],
-      "order": 47,
+      "order": 42,
       "mode": 0,
       "title": "Get_vae_audio"
     },
@@ -7205,7 +7104,7 @@
         238.3766168056876,
         46.0
       ],
-      "order": 139,
+      "order": 144,
       "mode": 0
     },
     {
@@ -7240,7 +7139,7 @@
         210.0,
         60.0
       ],
-      "order": 48,
+      "order": 43,
       "mode": 0,
       "title": "Get_lastframe_resized"
     },
@@ -7360,7 +7259,7 @@
         273.7224392361113,
         214.0
       ],
-      "order": 102,
+      "order": 103,
       "mode": 0
     },
     {
@@ -7395,7 +7294,7 @@
         210.0,
         58.0
       ],
-      "order": 49,
+      "order": 44,
       "mode": 0,
       "title": "Get_vae"
     },
@@ -7431,7 +7330,7 @@
         210.0,
         58.0
       ],
-      "order": 50,
+      "order": 45,
       "mode": 0,
       "title": "Get_firstframe",
       "color": "rgba(0,0,0,.8)",
@@ -7469,7 +7368,7 @@
         210.0,
         60.0
       ],
-      "order": 51,
+      "order": 46,
       "mode": 0,
       "title": "Get_firstframe_strength"
     },
@@ -7505,7 +7404,7 @@
         210.0,
         58.0
       ],
-      "order": 52,
+      "order": 47,
       "mode": 0,
       "title": "Get_positive"
     },
@@ -7541,7 +7440,7 @@
         210.0,
         58.0
       ],
-      "order": 53,
+      "order": 48,
       "mode": 0,
       "title": "Get_negative"
     },
@@ -7577,7 +7476,7 @@
         210.0,
         60.0
       ],
-      "order": 54,
+      "order": 49,
       "mode": 0,
       "title": "Get_vae"
     },
@@ -7613,7 +7512,7 @@
         210.0,
         58.0
       ],
-      "order": 55,
+      "order": 50,
       "mode": 0,
       "title": "Get_lastframe",
       "color": "rgba(0,0,0,.8)",
@@ -7651,7 +7550,7 @@
         210.0,
         58.0
       ],
-      "order": 56,
+      "order": 51,
       "mode": 0,
       "title": "Get_lastframe_strength"
     },
@@ -7692,7 +7591,7 @@
         223.53515625,
         60.0
       ],
-      "order": 133,
+      "order": 138,
       "mode": 0,
       "title": "Set_positive_guider"
     },
@@ -7733,7 +7632,7 @@
         223.53515625,
         58.0
       ],
-      "order": 134,
+      "order": 139,
       "mode": 0,
       "title": "Set_negative_guider"
     },
@@ -7832,7 +7731,7 @@
         238.3766168056876,
         150.0
       ],
-      "order": 140,
+      "order": 145,
       "mode": 0
     },
     {
@@ -7867,7 +7766,7 @@
         210.0,
         58.0
       ],
-      "order": 57,
+      "order": 52,
       "mode": 0,
       "title": "Get_positive_guider"
     },
@@ -7903,7 +7802,7 @@
         210.0,
         60.0
       ],
-      "order": 58,
+      "order": 53,
       "mode": 0,
       "title": "Get_negative_guider"
     },
@@ -7975,7 +7874,7 @@
         238.3766168056876,
         66.0
       ],
-      "order": 138,
+      "order": 143,
       "mode": 0
     },
     {
@@ -8027,7 +7926,7 @@
         274.0120536645418,
         58.0
       ],
-      "order": 59,
+      "order": 54,
       "mode": 0
     },
     {
@@ -8082,7 +7981,7 @@
         274.0120536645418,
         71.11401815185218
       ],
-      "order": 135,
+      "order": 140,
       "mode": 0
     },
     {
@@ -8139,7 +8038,7 @@
         274.0120536645418,
         46.0
       ],
-      "order": 125,
+      "order": 130,
       "mode": 0
     },
     {
@@ -8221,7 +8120,7 @@
         241.980061511233,
         249.82890094659467
       ],
-      "order": 118,
+      "order": 122,
       "mode": 0
     },
     {
@@ -8304,7 +8203,7 @@
         238.15470099351288,
         247.72943550620533
       ],
-      "order": 136,
+      "order": 141,
       "mode": 0
     },
     {
@@ -8361,7 +8260,7 @@
         238.3766168056876,
         46.0
       ],
-      "order": 137,
+      "order": 142,
       "mode": 0
     },
     {
@@ -8442,7 +8341,7 @@
         273.7224392361113,
         115.91877134268861
       ],
-      "order": 99,
+      "order": 101,
       "mode": 0
     },
     {
@@ -8486,7 +8385,7 @@
         387.0142215022124,
         224.94884332014044
       ],
-      "order": 107,
+      "order": 109,
       "mode": 0,
       "title": "ENHANCED PROMPT",
       "color": "#008181",
@@ -8503,6 +8402,7 @@
         {
           "name": "noise_seed",
           "type": "INT",
+          "link": 3870,
           "localized_name": "noise_seed",
           "widget": {
             "name": "noise_seed"
@@ -8542,7 +8442,7 @@
         274.0120536645418,
         82.0
       ],
-      "order": 60,
+      "order": 55,
       "mode": 0,
       "color": "#006691",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -8606,7 +8506,7 @@
         274.0120536645418,
         98.0
       ],
-      "order": 127,
+      "order": 132,
       "mode": 0,
       "title": "spatial"
     },
@@ -8698,7 +8598,7 @@
         274.0120536645418,
         146.0
       ],
-      "order": 129,
+      "order": 134,
       "mode": 0
     },
     {
@@ -8809,7 +8709,7 @@
         275.18241479479093,
         162.0
       ],
-      "order": 132,
+      "order": 137,
       "mode": 0
     },
     {
@@ -8854,7 +8754,7 @@
         231.88575313565934,
         58.0
       ],
-      "order": 61,
+      "order": 56,
       "mode": 0,
       "title": "FIRST FRAME STRENGTH",
       "color": "#346434",
@@ -8871,6 +8771,7 @@
         {
           "name": "noise_seed",
           "type": "INT",
+          "link": 3869,
           "localized_name": "noise_seed",
           "widget": {
             "name": "noise_seed"
@@ -8910,7 +8811,7 @@
         271.305509971064,
         82.0
       ],
-      "order": 62,
+      "order": 57,
       "mode": 0,
       "color": "#006691",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -8935,7 +8836,7 @@
         382.280702747692,
         89.8245395507779
       ],
-      "order": 63,
+      "order": 58,
       "mode": 0,
       "title": "About  Models",
       "color": "#222",
@@ -8961,7 +8862,7 @@
         382.280702747692,
         107.3859507080042
       ],
-      "order": 64,
+      "order": 59,
       "mode": 0,
       "title": "About User Made Loras",
       "color": "#222",
@@ -8987,7 +8888,7 @@
         382.280702747692,
         107.3859507080042
       ],
-      "order": 65,
+      "order": 60,
       "mode": 0,
       "title": "About Sampler Preview",
       "color": "#222",
@@ -9035,7 +8936,7 @@
         364.0273046899474,
         61.42705146159551
       ],
-      "order": 66,
+      "order": 61,
       "mode": 0,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -9102,7 +9003,7 @@
         364.0273046899474,
         110.28381432699462
       ],
-      "order": 67,
+      "order": 62,
       "mode": 0,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -9149,7 +9050,7 @@
         364.0273046899474,
         58.0
       ],
-      "order": 68,
+      "order": 63,
       "mode": 0,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -9216,56 +9117,8 @@
         270.0,
         82.0
       ],
-      "order": 103,
+      "order": 104,
       "mode": 4
-    },
-    {
-      "id": 2108,
-      "type": "PrimitiveFloat",
-      "widgets_values": [
-        1
-      ],
-      "inputs": [
-        {
-          "name": "value",
-          "type": "FLOAT",
-          "localized_name": "value",
-          "widget": {
-            "name": "value"
-          },
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            3742
-          ],
-          "localized_name": "FLOAT",
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PrimitiveFloat",
-        "cnr_id": "comfy-core",
-        "ver": "0.19.3"
-      },
-      "flags": {},
-      "pos": [
-        1877.2135300710743,
-        4558.269285771708
-      ],
-      "size": [
-        223.51767105437784,
-        58.0
-      ],
-      "order": 69,
-      "mode": 0,
-      "title": "LAST FRAME STRENGTH",
-      "color": "#346434",
-      "bgcolor": "rgba(24,24,27,.9)"
     },
     {
       "id": 43,
@@ -9285,13 +9138,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "LTX-2_00001-audio.mp4",
+            "filename": "LTX-2_00002-audio.mp4",
             "subfolder": "",
             "type": "output",
             "format": "video/h264-mp4",
             "frame_rate": 24,
-            "workflow": "LTX-2_00001.png",
-            "fullpath": "/home/akatzfey/dev/projects/comfyui-agent-api/.comfygit-workspace/environments/comfygit-workflow-corpus-dev/ComfyUI/output/LTX-2_00001-audio.mp4"
+            "workflow": "LTX-2_00002.png",
+            "fullpath": "/home/akatzfey/dev/projects/comfyui-agent-api/.comfygit-workspace/environments/comfygit-workflow-corpus-dev/ComfyUI/output/LTX-2_00002-audio.mp4"
           }
         }
       },
@@ -9438,7 +9291,7 @@
         488.7008856261732,
         605.7854870943952
       ],
-      "order": 76,
+      "order": 79,
       "mode": 0
     },
     {
@@ -9495,7 +9348,7 @@
         405.9943556687581,
         82.0
       ],
-      "order": 70,
+      "order": 64,
       "mode": 0,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -9575,7 +9428,7 @@
         395.5685371501602,
         130.0
       ],
-      "order": 71,
+      "order": 65,
       "mode": 0,
       "color": "#1f1f48",
       "bgcolor": "rgba(24,24,27,.9)"
@@ -9655,16 +9508,303 @@
         498.4326408524156,
         82.0
       ],
-      "order": 95,
+      "order": 93,
       "mode": 4,
       "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2168,
+      "type": "ComfyNumberConvert",
+      "widgets_values": [],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT,FLOAT,STRING,BOOLEAN",
+          "link": 3865,
+          "localized_name": "value",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            3866
+          ],
+          "localized_name": "FLOAT",
+          "slot_index": 0
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "localized_name": "INT",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyNumberConvert"
+      },
+      "flags": {},
+      "pos": [
+        923.3524377120115,
+        4715.786444212295
+      ],
+      "size": [
+        149.4458984375,
+        46.0
+      ],
+      "order": 97,
+      "mode": 0
+    },
+    {
+      "id": 2078,
+      "type": "INTConstant",
+      "widgets_values": [
+        10
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            3689
+          ],
+          "localized_name": "value",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "INTConstant",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "pos": [
+        640.9191383711541,
+        4559.4639865831205
+      ],
+      "size": [
+        210.0,
+        58.0
+      ],
+      "order": 67,
+      "mode": 0,
+      "title": "LENGTH (in seconds)",
+      "color": "#006691",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2079,
+      "type": "INTConstant",
+      "widgets_values": [
+        720
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            3685
+          ],
+          "localized_name": "value",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "INTConstant",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "pos": [
+        402.534400299723,
+        4562.70776769717
+      ],
+      "size": [
+        210.0,
+        58.0
+      ],
+      "order": 68,
+      "mode": 0,
+      "title": "HEIGHT",
+      "color": "#006691",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2080,
+      "type": "INTConstant",
+      "widgets_values": [
+        1280
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            3686
+          ],
+          "localized_name": "value",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "INTConstant",
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "c6ce76d00bb8177d1b0286cad891df08eff5226e"
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "pos": [
+        166.31199322565232,
+        4561.340558312514
+      ],
+      "size": [
+        210.0,
+        58.0
+      ],
+      "order": 69,
+      "mode": 0,
+      "title": "WIDTH",
+      "color": "#006691",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2170,
+      "type": "PrimitiveInt",
+      "widgets_values": [
+        24,
+        "fixed"
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3865
+          ],
+          "localized_name": "INT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "flags": {},
+      "pos": [
+        851.5847949301645,
+        4819.311437864436
+      ],
+      "size": [
+        270.0,
+        82.0
+      ],
+      "order": 70,
+      "mode": 0
+    },
+    {
+      "id": 2108,
+      "type": "PrimitiveFloat",
+      "widgets_values": [
+        1
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            3742
+          ],
+          "localized_name": "FLOAT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveFloat",
+        "cnr_id": "comfy-core",
+        "ver": "0.19.3"
+      },
+      "flags": {},
+      "pos": [
+        1877.2135300710743,
+        4558.269285771708
+      ],
+      "size": [
+        223.51767105437784,
+        58.0
+      ],
+      "order": 71,
+      "mode": 0,
+      "title": "LAST FRAME STRENGTH",
+      "color": "#346434",
       "bgcolor": "rgba(24,24,27,.9)"
     },
     {
       "id": 45,
       "type": "LoadImage",
       "widgets_values": [
-        "Qwen_Edit_2511_00005_.png",
+        "Qwen_Edit_2511_00001_.png",
         "image"
       ],
       "inputs": [
@@ -9730,7 +9870,7 @@
       "id": 47,
       "type": "LoadImage",
       "widgets_values": [
-        "Qwen_Edit_2511_00007_.png",
+        "Qwen_Edit_2511_00002_.png",
         "image"
       ],
       "inputs": [
@@ -9796,7 +9936,7 @@
       "id": 2103,
       "type": "PrimitiveStringMultiline",
       "widgets_values": [
-        "Make this image come alive with cinematic motion, smooth animation. \n\nA girl and her friend llama look at each other in anger, the girl bares her fists and the llama snarls at her. They end up in a boxing match to see who can fight the best.\n\nMedium shot where the camera slowly pulls out and the characters stay relatively centered while the background morphs into a boxing arena. Single continuous camera shot."
+        "Make this image come alive with cinematic motion, smooth animation. \n\nA girl and her friend llama  are hiking in the mountains. Then they are seen playing on the beach.\n\nMedium shot where the camera slowly pulls out and the characters stay relatively centered while the background changes scenery to the beach. Single continuous camera shot."
       ],
       "inputs": [
         {
@@ -9841,6 +9981,152 @@
       "bgcolor": "rgba(24,24,27,.9)"
     },
     {
+      "id": 2173,
+      "type": "PrimitiveInt",
+      "widgets_values": [
+        1,
+        "fixed"
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3868
+          ],
+          "localized_name": "INT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "flags": {},
+      "pos": [
+        2192.567000713982,
+        3010.317922431748
+      ],
+      "size": [
+        270.0,
+        82.0
+      ],
+      "order": 75,
+      "mode": 0
+    },
+    {
+      "id": 2171,
+      "type": "PrimitiveInt",
+      "widgets_values": [
+        42,
+        "fixed"
+      ],
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "localized_name": "value",
+          "widget": {
+            "name": "value"
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3867,
+            3869
+          ],
+          "localized_name": "INT",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "flags": {},
+      "pos": [
+        2186.7881253818,
+        2876.0246172897423
+      ],
+      "size": [
+        270.0,
+        82.0
+      ],
+      "order": 75,
+      "mode": 0
+    },
+    {
+      "id": 2172,
+      "type": "BasicMath",
+      "widgets_values": [
+        "+"
+      ],
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT",
+          "link": 3867,
+          "localized_name": "a",
+          "slot_index": 0
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT",
+          "link": 3868,
+          "localized_name": "b",
+          "slot_index": 1
+        },
+        {
+          "name": "operation",
+          "type": "COMBO",
+          "localized_name": "operation",
+          "widget": {
+            "name": "operation"
+          },
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "INT,FLOAT",
+          "links": [
+            3870
+          ],
+          "localized_name": "NUMBER",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicMath"
+      },
+      "flags": {},
+      "pos": [
+        2505.671953663083,
+        2945.377024321444
+      ],
+      "size": [
+        270.0,
+        78.0
+      ],
+      "order": 76,
+      "mode": 0
+    },
+    {
       "id": 2070,
       "type": "8fa4f93a-67ee-463f-ba43-249580c0bfb1",
       "pos": [
@@ -9854,7 +10140,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 98,
+      "order": 100,
       "mode": 0,
       "inputs": [
         {
@@ -9919,7 +10205,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 30,
+      "order": 66,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -9942,10 +10228,10 @@
   ],
   "extra": {
     "ds": {
-      "scale": 1.5535220464771204,
+      "scale": 0.9646149645001494,
       "offset": [
-        -3734.029687646324,
-        -3317.591678586571
+        -1814.396683279341,
+        -2627.7027620321537
       ]
     },
     "frontendVersion": "1.42.14",
