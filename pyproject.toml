@@ -54,30 +54,12 @@ download_url = "https://cdn.comfy.org/akatz/comfygit-manager/0.0.24/node.zip"
 source = "development"
 criticality = "optional"
 
-[tool.comfygit.nodes.comfyui-kjnodes]
-name = "ComfyUI-KJNodes"
-registry_id = "comfyui-kjnodes"
-repository = "https://github.com/kijai/ComfyUI-KJNodes"
-version = "1.3.9"
-download_url = "https://cdn.comfy.org/kijai/comfyui-kjnodes/1.3.9/node.zip"
-source = "registry"
-criticality = "required"
-
 [tool.comfygit.nodes.rgthree-comfy]
 name = "rgthree-comfy"
 registry_id = "rgthree-comfy"
 repository = "https://github.com/rgthree/rgthree-comfy"
 version = "1.0.2604070017"
 download_url = "https://cdn.comfy.org/rgthree/rgthree-comfy/1.0.2604070017/node.zip"
-source = "registry"
-criticality = "required"
-
-[tool.comfygit.nodes.comfyui-akatz-nodes]
-name = "ComfyUI-AKatz-Nodes"
-registry_id = "comfyui-akatz-nodes"
-repository = "https://github.com/akatz-ai/ComfyUI-AKatz-Nodes"
-version = "1.11.1"
-download_url = "https://cdn.comfy.org/akatz/comfyui-akatz-nodes/1.11.1/node.zip"
 source = "registry"
 criticality = "required"
 
@@ -119,7 +101,6 @@ criticality = "required"
 
 [tool.comfygit.workflows."txt2img basic"]
 path = "workflows/txt2img basic.json"
-nodes = ["comfyui-kjnodes"]
 
 [[tool.comfygit.workflows."txt2img basic".models]]
 filename = "v1-5-pruned-emaonly-fp16.safetensors"
@@ -135,7 +116,11 @@ default_contract = "default"
 api_prompt_file = "workflow_api/txt2img basic.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-08T00:49:30.858251Z"
+api_prompt_generated_at = "2026-05-08T00:52:48.320322Z"
+
+[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default]
+display_name = "Text to Image"
+description = "Basic text to image with SD1.5"
 
 [[tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default.inputs]]
 name = "prompt"
@@ -373,12 +358,6 @@ comfygit-manager-b2d41ad7 = [
     "zeroconf>=0.131.0",
 ]
 comfygit-system = ["uv>=0.10.0"]
-comfyui-akatz-nodes-7fa97fd9 = [
-    "numpy",
-    "opencv-contrib-python-headless",
-    "pydub",
-    "torch",
-]
 comfyui-depthanythingv2-7a4a3b7f = [
     "accelerate",
     "huggingface-hub",
@@ -388,13 +367,6 @@ comfyui-depthflow-nodes-06684be3 = [
     "numpy",
     "opencv-contrib-python-headless",
     "pydantic",
-]
-comfyui-kjnodes-f4971021 = [
-    "color-matcher",
-    "matplotlib",
-    "mss",
-    "opencv-contrib-python-headless",
-    "pillow>=10.3.0",
 ]
 comfyui-videohelpersuite-879d1780 = [
     "imageio-ffmpeg",
