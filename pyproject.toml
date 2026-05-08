@@ -116,7 +116,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/txt2img basic.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-08T00:52:48.320322Z"
+api_prompt_generated_at = "2026-05-08T01:00:29.226470Z"
 
 [tool.comfygit.workflows."txt2img basic".execution_contract.contracts.default]
 display_name = "Text to Image"
@@ -220,7 +220,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/depthflow_showcase_v2_1.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-08T00:52:06.528310Z"
+api_prompt_generated_at = "2026-05-08T01:00:10.599186Z"
 
 [tool.comfygit.workflows.depthflow_showcase_v2_1.execution_contract.contracts.default]
 display_name = "Depthflow"
@@ -262,7 +262,7 @@ widget_idx = 0
 field_key = "value"
 api_node_id = "222"
 api_field_key = "value"
-default = "2.5"
+default = 2.5
 min = 0
 max = 60
 

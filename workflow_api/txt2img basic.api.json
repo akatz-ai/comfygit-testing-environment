@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 156680208700286,
+      "seed": 1070479836732825,
       "steps": 20,
       "cfg": 8,
       "sampler_name": "euler",
@@ -102,31 +102,6 @@
     "class_type": "SaveImage",
     "_meta": {
       "title": "Save Image"
-    }
-  },
-  "10": {
-    "inputs": {
-      "mask_opacity": 1,
-      "mask_color": "255, 255, 255",
-      "pass_through": false
-    },
-    "class_type": "ImageAndMaskPreview",
-    "_meta": {
-      "title": "ImageAndMaskPreview"
-    }
-  },
-  "11": {
-    "inputs": {
-      "border_blending": 0.25,
-      "crop_rescale": 1,
-      "border_top": true,
-      "border_bottom": true,
-      "border_left": true,
-      "border_right": true
-    },
-    "class_type": "BatchUncrop",
-    "_meta": {
-      "title": "Batch Uncrop"
     }
   }
 }
