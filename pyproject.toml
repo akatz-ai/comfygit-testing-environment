@@ -193,6 +193,14 @@ status = "resolved"
 nodes = [{node_id = "2", node_type = "VAELoader", widget_idx = 0, widget_value = "ae.safetensors"}]
 hash = "38f082e7b86d146b"
 
+[[tool.comfygit.workflows.z-image.models]]
+filename = "zImageTurboAnime_aioBF16.safetensors"
+category = "diffusion_models"
+criticality = "required"
+status = "resolved"
+nodes = [{node_id = "23", node_type = "UNETLoader", widget_idx = 0, widget_value = "zImageTurboAnime_aioBF16.safetensors"}]
+hash = "54be6d2abdeaddf3"
+
 [tool.comfygit.workflows.image_qwen_image_edit_2511]
 path = "workflows/image_qwen_image_edit_2511.json"
 
@@ -293,6 +301,7 @@ e7632309aa8470b9 = {filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors", size = 9
 8157223ca0c385d4 = {filename = "qwen_image_vae.safetensors", size = 253806246, relative_path = "vae/qwen_image_vae.safetensors", category = "vae", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"]}
 a1ae1ecf3fb8e280 = {filename = "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", category = "loras", sources = ["https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors"]}
 09da89f624c1daa4 = {filename = "qwen_image_edit_2511_bf16.safetensors", size = 40861031560, relative_path = "diffusion_models/qwen_image_edit_2511_bf16.safetensors", category = "diffusion_models", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_edit_2511_bf16.safetensors"]}
+54be6d2abdeaddf3 = {filename = "zImageTurboAnime_aioBF16.safetensors", size = 20522591874, relative_path = "diffusion_models/zImageTurboAnime_aioBF16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2543657?type=Model&format=SafeTensor&size=pruned&fp=bf16"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
