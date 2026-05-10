@@ -210,7 +210,7 @@ default_contract = "default"
 api_prompt_file = "workflow_api/image_qwen_image_edit_2511.api.json"
 api_prompt_source = "comfyui_frontend"
 api_prompt_generated_by = "comfygit-manager"
-api_prompt_generated_at = "2026-05-07T04:52:01.310931Z"
+api_prompt_generated_at = "2026-05-10T23:58:31.249698Z"
 
 [tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default]
 display_name = "Image Editing"
@@ -243,14 +243,26 @@ min = 0
 max = 99999999
 
 [[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.inputs]]
-name = "image"
+name = "image1"
 type = "image"
 node_id = "41"
 required = true
-display_name = "Image"
+display_name = "Image 1"
 widget_idx = 0
 field_key = "image"
 api_node_id = "41"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows.image_qwen_image_edit_2511.execution_contract.contracts.default.inputs]]
+name = "image2"
+type = "image"
+node_id = "83"
+required = true
+display_name = "Image 2"
+widget_idx = 0
+field_key = "image"
+api_node_id = "83"
 api_field_key = "image"
 default = ""
 
