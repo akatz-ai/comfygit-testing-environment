@@ -340,6 +340,119 @@ status = "resolved"
 nodes = [{node_id = "2454ad83-157c-40dd-9f19-5daaf4041ce0:317", node_type = "LTXAVTextEncoderLoader", widget_idx = 0, widget_value = "gemma_3_12B_it_fp4_mixed.safetensors"}]
 hash = "59cfa9ca80733ff9"
 
+[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/video_ltx2_3_i2v.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-05-11T07:49:58.406051Z"
+
+[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default]
+display_name = "Image to Video"
+description = "Using LTX 2.3"
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "320"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+field_key = "value"
+api_node_id = "320:319"
+api_field_key = "value"
+default = "Photo shoot style cut, man looks slowly left then slowly right and smiles"
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "width"
+type = "integer"
+node_id = "320"
+required = true
+display_name = "Width"
+widget_idx = 1
+field_key = "value_2"
+api_node_id = "320:312"
+api_field_key = "value"
+default = 720
+min = 128
+max = 4096
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "height"
+type = "integer"
+node_id = "320"
+required = true
+display_name = "Height"
+widget_idx = 2
+field_key = "value_3"
+api_node_id = "320:299"
+api_field_key = "value"
+default = 720
+min = 128
+max = 4096
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "duration"
+type = "integer"
+node_id = "320"
+required = true
+display_name = "Duration"
+widget_idx = 3
+field_key = "value_4"
+api_node_id = "320:301"
+api_field_key = "value"
+default = 5
+min = 1
+max = 100
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "fps"
+type = "integer"
+node_id = "320"
+required = true
+display_name = "FPS"
+widget_idx = 8
+field_key = "value_5"
+api_node_id = "320:300"
+api_field_key = "value"
+default = 25
+min = 12
+max = 100
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "noise_seed"
+type = "integer"
+node_id = "320"
+required = true
+display_name = "Seed"
+widget_idx = 10
+field_key = "noise_seed"
+api_node_id = "320:277"
+api_field_key = "noise_seed"
+default = "0"
+min = 0
+max = 99999999
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.inputs]]
+name = "image"
+type = "image"
+node_id = "269"
+required = true
+display_name = "Image"
+widget_idx = 0
+field_key = "image"
+api_node_id = "269"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows.video_ltx2_3_i2v.execution_contract.contracts.default.outputs]]
+name = "save_video"
+type = "video"
+node_id = "75"
+display_name = "Save Video"
+selector = "primary"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"]}
