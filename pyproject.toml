@@ -989,6 +989,7 @@ comfyui-fl-voxcpm-6c19a74b = [
     "tqdm",
     "transformers>=4.36.2",
     "wetext",
+    "librosa"
 ]
 comfyui-videohelpersuite-879d1780 = [
     "imageio-ffmpeg",
