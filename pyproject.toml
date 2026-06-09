@@ -469,16 +469,17 @@ c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", si
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
-override-dependencies = ["uv>=0.10.0"]
+override-dependencies = ["uv>=0.11.8"]
 constraint-dependencies = ["av<16.2", "transformers>=4.51.3,<5", "fsspec<2026.3"]
 [dependency-groups]
 comfygit-manager-b8a6c4eb = [
     "comfygit-core==0.3.22",
+    "comfygit-studio==0.5.0",
     "watchdog>=6.0.0",
     "xxhash>=3.5.0",
     "zeroconf>=0.131.0",
 ]
-comfygit-system = ["uv>=0.10.0"]
+comfygit-system = ["uv>=0.11.8"]
 comfyui-kjnodes-f4971021 = [
     "color-matcher",
     "matplotlib",
