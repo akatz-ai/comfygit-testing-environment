@@ -326,7 +326,7 @@ hash = "02f44099be1afd16"
 
 [[tool.comfygit.workflows.video_ltx2_3_i2v.models]]
 filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
-category = "unknown"
+category = "latent_upscale_models"
 criticality = "required"
 status = "resolved"
 nodes = [{node_id = "2454ad83-157c-40dd-9f19-5daaf4041ce0:311", node_type = "LatentUpscaleModelLoader", widget_idx = 0, widget_value = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"}]
@@ -466,6 +466,7 @@ api_prompt_generated_at = "2026-06-10T06:50:14.844680Z"
 
 [tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default]
 display_name = "LTX2.3 First Frame Last Frame"
+
 [[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
 name = "first_frame"
 type = "image"
@@ -571,10 +572,26 @@ node_id = "68"
 display_name = "Save Video"
 selector = "primary"
 
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.models]]
+filename = "ltx-2.3-22b-distilled-fp8.safetensors"
+category = "checkpoints"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "f9f61b10-b689-4d67-b4fa-0acc1d9b5390:127", node_type = "CheckpointLoaderSimple", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-fp8.safetensors"}, {node_id = "f9f61b10-b689-4d67-b4fa-0acc1d9b5390:126", node_type = "LTXVAudioVAELoader", widget_idx = 0, widget_value = "ltx-2.3-22b-distilled-fp8.safetensors"}, {node_id = "f9f61b10-b689-4d67-b4fa-0acc1d9b5390:103", node_type = "LTXAVTextEncoderLoader", widget_idx = 1, widget_value = "ltx-2.3-22b-distilled-fp8.safetensors"}]
+hash = "e1b8be24f2bb7e63"
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.models]]
+filename = "gemma_3_12B_it_fp4_mixed.safetensors"
+category = "text_encoders"
+criticality = "flexible"
+status = "resolved"
+nodes = [{node_id = "f9f61b10-b689-4d67-b4fa-0acc1d9b5390:103", node_type = "LTXAVTextEncoderLoader", widget_idx = 0, widget_value = "gemma_3_12B_it_fp4_mixed.safetensors"}]
+hash = "59cfa9ca80733ff9"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
-fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"]}
-38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae", sources = ["https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"]}
+fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://civitai.com/api/download/models/2442540?type=Model&format=SafeTensor&size=full&fp=fp16", "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"]}
+38f082e7b86d146b = {filename = "ae.safetensors", size = 335304388, relative_path = "vae/ae.safetensors", category = "vae", sources = ["https://civitai.com/api/download/models/2442479?type=Model&format=SafeTensor&size=full&fp=fp16", "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"]}
 e7632309aa8470b9 = {filename = "qwen_2.5_vl_7b_fp8_scaled.safetensors", size = 9384670680, relative_path = "text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"]}
 8157223ca0c385d4 = {filename = "qwen_image_vae.safetensors", size = 253806246, relative_path = "vae/qwen_image_vae.safetensors", category = "vae", sources = ["https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"]}
 a1ae1ecf3fb8e280 = {filename = "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", size = 849608296, relative_path = "loras/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", category = "loras", sources = ["https://huggingface.co/lightx2v/Qwen-Image-Edit-2511-Lightning/resolve/main/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors"]}
@@ -582,8 +599,9 @@ a1ae1ecf3fb8e280 = {filename = "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.
 54be6d2abdeaddf3 = {filename = "zImageTurboAnime_aioBF16.safetensors", size = 20522591874, relative_path = "diffusion_models/zImageTurboAnime_aioBF16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2543657?type=Model&format=SafeTensor&size=pruned&fp=bf16"]}
 74d135b3301f9593 = {filename = "ltx-2.3-22b-dev-fp8.safetensors", size = 29145431166, relative_path = "checkpoints/ltx-2.3-22b-dev-fp8.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors"]}
 02f44099be1afd16 = {filename = "ltx-2.3-22b-distilled-lora-384.safetensors", size = 7605507256, relative_path = "loras/ltx-2.3-22b-distilled-lora-384.safetensors", category = "loras", sources = ["https://huggingface.co/Lightricks/LTX-2.3/blob/main/ltx-2.3-22b-distilled-lora-384.safetensors"]}
-c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", size = 995743560, relative_path = "latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors", category = "unknown", sources = ["https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors?download=true"]}
+c1af86834f640459 = {filename = "ltx-2.3-spatial-upscaler-x2-1.1.safetensors", size = 995743560, relative_path = "latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors", category = "latent_upscale_models", sources = ["https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.1.safetensors?download=true"]}
 59cfa9ca80733ff9 = {filename = "gemma_3_12B_it_fp4_mixed.safetensors", size = 9447702218, relative_path = "text_encoders/gemma_3_12B_it_fp4_mixed.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors"]}
+e1b8be24f2bb7e63 = {filename = "ltx-2.3-22b-distilled-fp8.safetensors", size = 29531884062, relative_path = "checkpoints/ltx-2.3-22b-distilled-fp8.safetensors", category = "checkpoints", sources = ["https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-distilled-fp8.safetensors"]}
 
 [tool.uv]
 exclude-dependencies = ["opencv-contrib-python", "opencv-python", "opencv-python-headless"]
