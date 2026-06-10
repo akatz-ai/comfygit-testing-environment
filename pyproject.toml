@@ -453,6 +453,124 @@ node_id = "75"
 display_name = "Save Video"
 selector = "primary"
 
+[tool.comfygit.workflows.video_ltx2_3_flf2v]
+path = "workflows/video_ltx2_3_flf2v.json"
+
+[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract]
+version = 1
+default_contract = "default"
+api_prompt_file = "workflow_api/video_ltx2_3_flf2v.api.json"
+api_prompt_source = "comfyui_frontend"
+api_prompt_generated_by = "comfygit-manager"
+api_prompt_generated_at = "2026-06-10T06:50:14.844680Z"
+
+[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default]
+display_name = "LTX2.3 First Frame Last Frame"
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "first_frame"
+type = "image"
+node_id = "31"
+required = true
+display_name = "First Frame"
+widget_idx = 0
+field_key = "image"
+api_node_id = "31"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "last_frame"
+type = "image"
+node_id = "39"
+required = true
+display_name = "Last Frame"
+widget_idx = 0
+field_key = "image"
+api_node_id = "39"
+api_field_key = "image"
+default = ""
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "prompt"
+type = "string"
+node_id = "129"
+required = true
+display_name = "Prompt"
+widget_idx = 0
+field_key = "text"
+api_node_id = "129:128"
+api_field_key = "text"
+default = "Slow orbit, luxury camera movement"
+ui_control = "textarea"
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "width"
+type = "integer"
+node_id = "129"
+required = true
+display_name = "width"
+widget_idx = 1
+field_key = "value"
+api_node_id = "129:113"
+api_field_key = "value"
+default = 1280
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "height"
+type = "integer"
+node_id = "129"
+required = true
+display_name = "height"
+widget_idx = 2
+field_key = "value_1"
+api_node_id = "129:98"
+api_field_key = "value"
+default = 720
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "duration"
+type = "integer"
+node_id = "129"
+required = true
+display_name = "duration"
+widget_idx = 3
+field_key = "value_2"
+api_node_id = "129:102"
+api_field_key = "value"
+default = 5
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "fps"
+type = "integer"
+node_id = "129"
+required = true
+display_name = "fps"
+widget_idx = 4
+field_key = "value_3"
+api_node_id = "129:114"
+api_field_key = "value"
+default = 25
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.inputs]]
+name = "noise_seed"
+type = "integer"
+node_id = "129"
+required = true
+display_name = "noise_seed"
+widget_idx = 5
+field_key = "noise_seed"
+api_node_id = "129:100"
+api_field_key = "noise_seed"
+default = 570205876573102
+min = 0
+
+[[tool.comfygit.workflows.video_ltx2_3_flf2v.execution_contract.contracts.default.outputs]]
+name = "save_video"
+type = "video"
+node_id = "68"
+display_name = "Save Video"
+selector = "primary"
+
 [tool.comfygit.models]
 86628cf98ae14c4b = {filename = "z_image_turbo_bf16.safetensors", size = 12309866400, relative_path = "diffusion_models/z_image_turbo_bf16.safetensors", category = "diffusion_models", sources = ["https://civitai.com/api/download/models/2442439?type=Model&format=SafeTensor&size=full&fp=bf16"]}
 fe0e63500dafbced = {filename = "qwen_3_4b.safetensors", size = 8044982048, relative_path = "text_encoders/qwen_3_4b.safetensors", category = "text_encoders", sources = ["https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"]}
@@ -473,7 +591,7 @@ override-dependencies = ["uv>=0.11.8"]
 constraint-dependencies = ["av<16.2", "transformers>=4.51.3,<5", "fsspec<2026.3"]
 [dependency-groups]
 comfygit-manager-b8a6c4eb = [
-    "comfygit-core==0.3.22",
+    "comfygit-core==0.5.0",
     "comfygit-studio==0.5.0",
     "watchdog>=6.0.0",
     "xxhash>=3.5.0",
